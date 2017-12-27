@@ -1,0 +1,7 @@
+.header_content{margin:0px auto;display: block;width:1224px}
+.header_left a{text-decoration: none;color:#aaa;width: 100px;text-align: center;box-sizing:border-box;margin:0px 20px;}
+.header_left a:hover{color:white;border-bottom:2px solid #c62f2f}
+.btn-opa-red{background: none;border: 1px solid #8e413e;padding:4px 5px;color:#ea524e;}
+p.login{display: inline;margin:0px 6px;color:#aaa;}
+p.login a{color:white;}
+*{ font-family: "Microsoft Yahei", 'PingFang SC', 'hiragino sans gb', simsun,\5b8b\4f53, Arial, Helvetica, sans-serif;}

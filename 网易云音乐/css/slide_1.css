@@ -1,0 +1,58 @@
+/*.slide1 h1{background: url(img/wel.png);}*/
+.swiper-slide1{
+ background: url(../img/1.jpg) no-repeat center;
+ background-size: 100% 100%;
+  display:table; 
+}
+.swiper-slide1 h1{
+	background: url(../img/wel.png) no-repeat center;
+	height:600px;
+  	vertical-align:middle;  
+    display:table-cell;  
+}
+.swiper-slide1 .btn-opa-red{
+	position: absolute;
+	top:58%;
+	font-size: 16px;
+	padding:10px;
+	padding:12px 30px;
+	font-family: "Microsoft YaHei";
+	border:2px solid #ea524e;
+	transform: translate(-50%, -50%); /*向左向上分别平移自身的一半*/  
+    -webkit-transform: translate(-50%, -50%);  
+    -moz-transform: translate(-50%, -50%); 
+}
+.btngroup{
+/*background:skyblue;*/
+position: absolute;
+top:75%;
+width: 100%;
+}
+.a_btn{
+	display: inline-block;
+	width: 120px;
+	height: 82px;
+/*	background:powderBlue;*/
+	margin:0px 70px;
+}
+.a_btn:nth-of-type(1){
+	background: url(../img/home.png) no-repeat;
+	background-position: 0px -523px
+}
+.a_btn:nth-of-type(1):hover{
+	background-position: 0px -609px
+}
+.a_btn:nth-of-type(2){
+	background: url(../img/home.png) no-repeat;
+	background-position: 0px -437px
+}
+.a_btn:nth-of-type(2):hover{
+	background-position: 0px -867px
+}
+.a_btn:nth-of-type(3){
+	background: url(../img/home.png) no-repeat;
+	background-position: 0px -695px
+}
+.a_btn:nth-of-type(3):hover{
+	background-position: 0px -781px
+}

@@ -1,0 +1,135 @@
+.sl_3{
+	position: absolute;
+	top:20%;
+	text-align: center;
+	width: 100%
+}
+.swiper-slide3 #exbline{
+	margin:0px auto;
+	margin-bottom: 40px;
+	color:white;
+	font-weight: normal;
+}
+small{
+	color:#aaa;
+	font-size: 17px;
+}
+#lunbo{
+	padding: 10px auto;
+	overflow: hidden;
+	width: 80%;
+	margin:80px auto 0px;
+	white-space:nowrap;/*不换行*/
+	width: 1164px;
+	position: relative;
+	color:white;
+}
+#lunbo .lunbo_inner div{
+	padding: 10px auto;
+	width: 260px;
+	height: 160px;
+	background:url(../img/03.jpg) no-repeat;
+	margin:auto 5px;
+	 white-space:normal;
+	 display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-orient:horizontal;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -o-box;
+  -o-box-pack: center;
+  -o-box-align: center;
+  display: -ms-box;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center;
+	box-orient:horizontal;
+}
+.lunbo_inner{
+	 display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-orient:horizontal;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -o-box;
+  -o-box-pack: center;
+  -o-box-align: center;
+  display: -ms-box;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center;
+	box-orient:horizontal;
+	overflow: hidden;
+	width: 1082px;
+	margin-left: 41px;
+}
+.lunbo_left_btn,.lunbo_right_btn{
+	position: absolute;
+	display: inline-block;
+	width: 35px;
+	height:188px;
+	left:0px;
+	background:url(../img/home.png);
+	background-position: 0px -1549px;
+	border: none;
+	top:0px;
+}
+.lunbo_right_btn{
+	left:1129px;
+	background-position: 0px -1209px;
+}
+.lunbo_left_btn:hover{
+	background-position:0px -1719px; 
+}
+.lunbo_right_btn:hover{
+	background-position:0px -1379px; 
+}
+.lunbo_time{
+	line-height: 40px
+}
+.about{
+	color:#ccc;
+	margin-top: 30px;
+	line-height: 40px;
+}
+#lunbo .lunbo_inner div:nth-of-type(1){
+	background:url(../img/duli.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(2){
+	background:url(../img/01.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(3){
+	background:url(../img/03.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(4){
+	background:url(../img/04.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(5){
+	background:url(../img/05.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(6){
+	background:url(../img/01.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(7){
+	background:url(../img/06.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(8){
+	background:url(../img/07.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(9){
+	background:url(../img/lizhi.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(10){
+	background:url(../img/shitoujihua.jpg) no-repeat;
+}
+#lunbo .lunbo_inner div:nth-of-type(11){
+	background:url(../img/zhaolei.jpg) no-repeat;
+}
