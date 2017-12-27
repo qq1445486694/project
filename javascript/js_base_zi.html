@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="css/waibu2.css" id="link1">
+</head>
+<body>
+	<div id="box">#box鼠标移入时#box1背景色变成黄色</div>
+	<div id="box1">#box1</div>
+	<script>
+		var box=document.getElementById("box");
+		var box1=document.getElementById("box1");
+		box.onmouseover=function function_name (argument) {
+			box1.style.background='yellow';
+		}
+	</script>
+	<pre>
+	&lt;div id="box"&gt;#box鼠标移入时#box1背景色变成黄色&lt;/div&gt;
+	&lt;div id="box1"&gt;#box1&lt;/div&gt;
+	&lt;script&gt;
+		var box=document.getElementById("box");
+		var box1=document.getElementById("box1");
+		box.onmouseover=function function_name (argument) {
+			box1.style.background='yellow';
+		}
+	&lt;/script&gt;
+	</pre>
+	<div>鼠标移入添加样式</div>
+	<style>
+		.yangshi{background: pink;border: 1px solid orange}
+	</style>
+	<script>
+		var div=document.getElementsByTagName('div');
+		div[2].onmouseover=function function_name (argument) {
+			div[2].className='yangshi';
+		}
+	</script>
+	<pre>
+	&lt;div&gt;鼠标移入添加样式&lt;/div&gt;
+	&lt;style&gt;
+		.yangshi{background: pink;border: 1px solid orange}
+	&lt;/style&gt;
+	&lt;script&gt;
+		var div=document.getElementsByTagName('div'); //定义一个名字div为所以div的元素
+		div[2].onmouseover=function function_name (argument) { //其中的第三个 div[2]
+			div[2].className='yangshi';
+		}
+	&lt;/script&gt;
+	</pre>
+	<button>点击</button>
+	<script>
+		var btn=document.getElementsByTagName('button');
+		var link1=document.getElementById('link1');
+		btn[0].onclick=function function_name (argument) {
+			link1.href='css/waibu.css'
+		}
+	</script>
+</body>
+</html>

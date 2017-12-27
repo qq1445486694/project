@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		#box,#box1,#box2{padding:20px;}
+	</style>
+</head>
+<body>
+<div id="box">
+	<input type="text">
+	<button>0</button>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+	<button>5</button>
+	<button>6</button>
+	<button>7</button>
+	<button>8</button>
+	<button>9</button>
+	<button>.</button>
+	<button>+</button>
+	<button>-</button>
+	<button>x</button>
+	<button>%</button>
+	<button>=</button>
+</div>
+<script>
+	var btn=document.getElementById('box').getElementsByTagName('button');
+	var input=document.getElementsByTagName('input')[0];
+	for(var i = 0; i < 11; i++) {
+		btn[i].onclick=function (argument) {
+			input.value=this.innerHTML
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var btn=document.getElementsByTagName('button');
+	var input=document.getElementsByTagName('input')[0];
+	for(var i = 0; i &lt; 11; i++) {
+		btn[i].onclick=function (argument) {
+			input.value=this.innerHTML
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<div id="box1">
+<input type="text">
+	<button>0</button>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+	<button>5</button>
+	<button>6</button>
+	<button>7</button>
+	<button>8</button>
+	<button>9</button>
+	<button>.</button>
+	<button>+</button>
+	<button>-</button>
+	<button>x</button>
+	<button>%</button>
+	<button>=</button>
+</div>
+</body>
+<script>
+	var btn_1=document.getElementById('box1').getElementsByTagName('button');
+	var input_1=document.getElementsByTagName('input')[1];
+	for(var i = 1; i < 10; i++) {
+		btn_1[i].onclick=function (argument) {
+			if(input_1.value=='0'){
+				input_1.value='';
+			}
+			input_1.value+=this.innerHTML
+		}
+	}
+	btn_1[0].onclick=function (argument) {
+		if(input_1.value=='0'){
+			input_1.value+=''
+		}else{
+			input_1.value+='0'
+		}
+	}
+	btn_1[10].onclick=function (argument) {
+		if(input_1.value==''){
+			input_1.value+='0.'
+		}else{
+			input_1.value+='.'
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var btn_1=document.getElementById('box1').getElementsByTagName('button');
+	var input_1=document.getElementsByTagName('input')[1];
+	for(var i = 1; i &lt; 10; i++) {
+		btn_1[i].onclick=function (argument) {
+			if(input_1.value=='0'){
+				input_1.value='';
+			}
+			input_1.value+=this.innerHTML
+		}
+	}
+	btn_1[0].onclick=function (argument) {
+		if(input_1.value=='0'){
+			input_1.value+=''
+		}else{
+			input_1.value+='0'
+		}
+	}
+	btn_1[10].onclick=function (argument) {
+		if(input_1.value==''){
+			input_1.value+='0.'
+		}else{
+			input_1.value+='.'
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<div id="box2">
+<input type="text">
+	<button>0</button>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+	<button>5</button>
+	<button>6</button>
+	<button>7</button>
+	<button>8</button>
+	<button>9</button>
+	<button>.</button>
+	<button>+</button>
+	<button>-</button>
+	<button>x</button>
+	<button>%</button>
+	<button>=</button>
+</div>
+</body>
+<script>
+	var btn_2=document.getElementById('box2').getElementsByTagName('button');
+	var input_2=document.getElementsByTagName('input')[2];
+	for(var i = 1; i < 10; i++) {
+		btn_2[i].onclick=function (argument) {
+			if(input_2.value=='0'){
+				input_2.value='';
+			}
+			input_2.value+=this.innerHTML
+		}
+	}
+	btn_2[0].onclick=function (argument) {
+		if(input_2.value=='0'){
+			input_2.value+=''
+		}else{
+			input_2.value+='0'
+		}
+	}
+	btn_2[10].onclick=function (argument) {
+		if(input_2.value==''){
+			input_2.value+='0.'
+		}else{
+			input_2.value+='.'
+		}
+	}
+	btn_2[11].onclick=function (argument) {
+					input_2.value='';
+		for(var i = 1; i < 10; i++) {
+			btn_2[i].onclick=function (argument) {
+				if(input_2.value=='0'){
+					input_2.value='';
+				}
+				input_2.value+=this.innerHTML
+			}
+		}
+		btn_2[0].onclick=function (argument) {
+			if(input_2.value=='0'){
+				input_2.value+=''
+			}else{
+				input_2.value+='0'
+			}
+		}
+		btn_2[10].onclick=function (argument) {
+			if(input_2.value==''){
+				input_2.value+='0.'
+			}else{
+				input_2.value+='.'
+			}
+		}	
+	}
+</script>
+</body>
+</html>

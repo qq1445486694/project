@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+</head>
+<body>
+	<p>显式定义与隐式定义</p>
+	<pre>
+		&lt;script&gt;
+		aa=12;//隐式定义 直接给变量赋值
+		var a;//显式定义 用Var定义，可以不用立即赋值
+		a=true;
+		&lt;/script&gt;
+	</pre>
+	<p>toString</p>
+</body>
+	<script>
+	var b_ch=true;
+	console.log(b_ch+'lorem');
+	var b_dh=true;
+	b_dh.toString();
+	console.log(b_dh+'lorem');
+	var nA='3.123';
+	console.log(parseFloat(nA)+2);
+	</script>
+	<pre>
+&lt;script&gt;
+	var b_ch=true;
+	console.log(b_ch+'lorem');
+	var b_dh=true;
+	b_dh.toString();
+	console.log(b_dh+'lorem');
+	var nA='3.123';
+	console.log(parseFloat(nA)+2);
+&lt;/script&gt;	
+	</pre>
+	<mark>局部变量如果和全局变量重复会覆盖掉全局变量</mark>
+	<br>
+	<mark>Infinity是数值类型的无穷大</mark>
+	<p>获得浏览器版本</p>
+	<script>
+	console.log('浏览器的版本为:'+navigator.appVersion);
+	</script>
+	<pre>
+&lt;script&gt;
+	console.log('浏览器的版本为:'+navigator.appVersion);
+&lt;/script&gt;	
+<mark>数组的类型可以不相同</mark>	
+	</pre>
+	<p>三目运算符</p>
+	<script>
+	var 5>2?console.log('5大于3'):console.log('5小于3');
+	</script>
+</html>

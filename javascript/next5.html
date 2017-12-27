@@ -1,0 +1,3162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<style>
+	#bigboxgx div,#bigbox div{height: 200px;border: 1px solid orange;width: 100%;margin:0px;background:white;display: none;padding: 20px}
+	#bigboxgx div img,	#bigbox div img{width: 110px;height: 150px;}
+	#bigboxgx div.active1,	#bigbox div.active1{display: block;}
+	#bigboxgx,	#bigbox{width: 100%;margin: 0px;background: none}
+	</style>
+</head>
+<body>
+	<ul class="nav nav-tabs" id="ul2">
+		<li class="active"><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+	</ul>
+	<div id="bigbox">
+		<div class="active1">
+			<img src="img/ayeni.jpg" alt="">
+		</div>
+		<div>
+			<img src="img/sword.png" alt="">
+		</div>
+		<div>
+			<img src="img/sword2.png" alt="">
+		</div>
+		<div>
+			<img src="img/baijvxie.jpg" alt="">
+		</div>
+		<div>
+			<img src="img/angle.png" alt="">
+		</div>
+	</div>
+	<script>
+	
+	function qweqweqw (bigbox) {
+		var ul2=document.getElementById('ul2').getElementsByTagName('li');
+	var odiv=document.getElementById(bigbox).getElementsByTagName('div');
+	for (var i = 0; i < ul2.length; i++) {
+		ul2[i].index=i;
+		ul2[i].onclick=function (argument) {
+			for (var i = 0; i < ul2.length; i++) {
+				ul2[i].className="";
+				odiv[i].className="";
+			};
+			odiv[this.index].className="active1";
+			this.className="active";
+		}
+	};
+	}
+	new qweqweqw('bigbox')
+	</script>
+	<pre>
+	&lt;script&gt;
+	var ul2=document.getElementById('ul2').getElementsByTagName('li');
+	var odiv=document.getElementById('bigbox').getElementsByTagName('div');
+	for (var i = 0; i < ul2.length; i++) {
+		ul2[i].index=i;
+		ul2[i].onclick=function (argument) {
+			for (var i = 0; i < ul2.length; i++) {
+				ul2[i].className="";
+				odiv[i].className="";
+			};
+			odiv[this.index].className="active1";
+			this.className="active";
+		}
+	};
+	&lt;/script&gt;
+	</pre>
+	<style>
+	#pingfen{padding: 10px}
+	#pingfen img{margin: 0px;float: left;padding: 5px}
+	</style>
+	<div id="pingfen">
+		<img src="img/q2.png" alt="">
+		<img src="img/q2.png" alt="">
+		<img src="img/q2.png" alt="">
+		<img src="img/q2.png" alt="">
+		<img src="img/q2.png" alt="">
+	</div>
+	<p id="result">你觉得怎样</p>
+	<script>
+	var pingfen=document.getElementById('pingfen').getElementsByTagName('img');
+	var result=document.getElementById('result');
+	for (var i = 0; i < pingfen.length; i++) {
+		pingfen[i].index=i; //不要加var
+		pingfen[i].onmouseover=function  (argument) {
+			for (var i = 0; i < pingfen.length; i++) {
+				pingfen[i].src="img/q2.png";
+			};
+			for (var i = 0; i <=this.index; i++) {
+				pingfen[i].src="img/q.png";
+				result.innerHTML='大概'+[this.index+1]+'分吧'
+			};
+		}
+		pingfen[i].onclick=function (argument) {
+			alert(this.index+1)
+		}
+	};
+	</script>
+	<pre style="clear:both">
+	&lt;script&gt;
+	var pingfen=document.getElementById('pingfen').getElementsByTagName('img');
+	var result=document.getElementById('result');
+	for (var i = 0; i &lt; pingfen.length; i++) {
+		pingfen[i].index=i; //不要加var
+		pingfen[i].onmouseover=function  (argument) {
+			for (var i = 0; i &lt; pingfen.length; i++) {
+				pingfen[i].src="img/q2.png";
+			};//所有的图片都重置
+			for (var i = 0; i &lt;=this.index; i++) {
+				pingfen[i].src="img/q.png";
+				result.innerHTML='大概'+[this.index+1]+'分吧'
+			};//目前的图片前的元素改变
+		}
+		pingfen[i].onclick=function (argument) {
+			alert(this.index+1)
+		}
+	};
+	&lt;/script&gt;		
+	</pre>
+	<style>
+		#div1{width: 100px;height: 100px;margin: 20px auto;background:skyblue;position: absolute;left:0px;}
+	</style>
+	<div id="div1">
+		
+	</div>
+	<button id="btn1">an</button>
+	<script>
+	var div1=document.getElementById('div1');
+	var btn1=document.getElementById('btn1');
+	btn1.onclick=function (argument) {
+		setInterval(function function_name (argument) {
+		div1.style.left=div1.offsetLeft+10+'px';
+		},100)
+	}
+	</script>
+	<pre style="margin-top:100px">
+	&lt;script&gt;
+	var div1=document.getElementById('div1');
+	var btn1=document.getElementById('btn1');
+	btn1.onclick=function (argument) {
+		setInterval(function function_name (argument) {
+		div1.style.left=div1.offsetLeft+10+'px';
+		},100)
+	}
+	&lt;/script&gt;	
+	</pre>
+	<style>
+		#div2{width: 100px;height: 100px;margin: 20px auto;background:skyblue;position: absolute;left:0px;}
+	</style>
+	<div id="div2">
+		
+	</div>
+	<button id="btn2">an</button>
+	<button id="clear">clear</button>
+	<button id="tout">timeout</button>
+	<script>
+	var div2=document.getElementById('div2');
+	var btn2=document.getElementById('btn2');
+	var tout=document.getElementById('tout');
+	btn2.onclick=function (argument) {
+		timer=setInterval(function () {
+		div2.style.left=div2.offsetLeft+10+'px';
+		},100)
+	}
+	clear.onclick=function () {
+		clearInterval(timer)
+	}
+	tout.onclick=function (argument) {
+		setTimeout(function (argument) {
+			div2.style.background="yellow"
+		},2000)
+	}
+	</script>
+	<pre style="margin-top:100px">
+	&lt;script&gt;
+	var div2=document.getElementById('div2');
+	var btn2=document.getElementById('btn2');
+	var tout=document.getElementById('tout');
+	btn2.onclick=function (argument) {
+		timer=setInterval(function () {
+		div2.style.left=div2.offsetLeft+10+'px';
+		},100)
+	} //给定时器一个名字
+	clear.onclick=function () {
+		clearInterval(timer) 清除timer这个定时器
+	}
+	tout.onclick=function (argument) {
+		setTimeout(function (argument) {
+			div2.style.background="yellow"
+		},2000)
+	}
+	&lt;/script&gt;	
+	</pre>
+	<div id="bigbox2">
+		<span>new Date()</span><p>当前日期</p>
+		<span>new Date().getHours()</span><p>当前日期</p>
+		<span>new Date().getMinutes()</span><p>当前日期</p>
+		<span>new Date().getSeconds()</span><p>当前日期</p>
+		<span>new Date().getYear()</span><p>当前日期</p>
+		<span>new Date().getFullYear()</span><p>当前日期</p>
+		<span>new Date().getTime()距离1970年1月1日之间的毫秒数</span><p>当前日期</p>
+		<span>new Date().getDay()星期</p>
+		<span>new Date().getMonth()外国人有0月</p>
+	</div>
+	<script>
+	var pp=document.getElementById('bigbox2').getElementsByTagName('p');
+	pp[0].innerHTML=new Date();
+	pp[1].innerHTML=new Date().getHours();
+	pp[2].innerHTML=new Date().getMinutes();
+	pp[3].innerHTML=new Date().getSeconds();
+	pp[4].innerHTML=new Date().getYear();
+	pp[5].innerHTML=new Date().getFullYear();
+	pp[6].innerHTML=new Date().getTime();
+	pp[7].innerHTML=new Date().getDay();
+	pp[8].innerHTML=new Date().getMonth();
+	</script>
+	<pre>
+	&lt;script&gt;
+	var pp=document.getElementById('bigbox2').getElementsByTagName('p');
+	pp[0].innerHTML=new Date();
+	pp[1].innerHTML=new Date().getHours();
+	pp[2].innerHTML=new Date().getMinutes();
+	pp[3].innerHTML=new Date().getSeconds();
+	pp[4].innerHTML=new Date().getYear();
+	pp[5].innerHTML=new Date().getFullYear();
+	pp[6].innerHTML=new Date().getTime();
+	pp[7].innerHTML=new Date().getDay();
+	pp[8].innerHTML=new Date().getMonth();
+	&lt;/script&gt;	
+	</pre>
+	<div id="bigbox3">
+		<p>当前日期</p>
+		<p>当前日期</p>
+		<p>当前日期</p>
+		<p>当前日期</p>
+	</div>
+	<script>
+	var pp=document.getElementById('bigbox3').getElementsByTagName('p');
+	// tim();//加上这个，页面加载的第一时间执行
+	setInterval(tim,1000);
+	function tim (argument) {
+		pp[0].innerHTML=new Date();
+		pp[1].innerHTML=new Date().getHours();
+		pp[2].innerHTML=new Date().getMinutes();
+		pp[3].innerHTML=new Date().getSeconds();
+	}
+	</script>
+	<pre>
+	&lt;script&gt;
+	var pp=document.getElementById('bigbox3').getElementsByTagName('p');
+	// tim();//加上这个，页面加载的第一时间执行
+	setInterval(tim,1000);
+	function tim (argument) {
+		pp[0].innerHTML=new Date();
+		pp[1].innerHTML=new Date().getHours();
+		pp[2].innerHTML=new Date().getMinutes();
+		pp[3].innerHTML=new Date().getSeconds();
+	}
+	&lt;/script&gt;		
+	</pre>
+	<style>
+		#div3{width: 20px;height: 20px;background: GreenYellow}
+	</style>
+	<div id="div3"></div>
+	<p>随时间增加宽度的DIV</p>
+	<script>
+	var div3=document.getElementById('div3');
+	setInterval(function (argument) {
+		c=new Date().getSeconds();	
+		div3.style.width=c+'px';
+	},1000);
+	</script>
+	<pre>
+	&lt;script&gt;
+	var div3=document.getElementById('div3');
+	setInterval(function (argument) {
+		c=new Date().getSeconds();	
+		div3.style.width=c+'px';
+	},1000);
+	&lt;/script&gt;	
+	</pre>
+	<p id="inp"></p>
+	<p id="inp1"></p>
+	<p>获取其中的某个字段</p>
+	<script>
+	var str="Lorem ipsum dolor sit.";
+	var inp1=document.getElementById('inp1');
+	inp.innerHTML=str;
+	inp1.innerHTML=str.charAt(6);
+	</script>
+	<pre>
+	&lt;script&gt;
+	var str="Lorem ipsum dolor sit.";
+	var inp1=document.getElementById('inp1');
+	inp.innerHTML=str;
+	inp1.innerHTML=str.charAt(2);//可能会是空格
+	&lt;/script&gt;		
+	</pre>
+	<style>
+		#bigbox4{position: relative;margin: 0px auto;overflow:hidden;width: 770px;height: 400px;border: 1px solid lime}
+		#ul3{list-style: none;border: 1px solid orange;position: absolute;top:0px;left:0px;padding: 0px}
+		#ul3 li{float: left;background:aqua;padding: 0px;margin: 0px}
+		#ul3 li img{}
+	</style>
+	<div id="bigbox4">
+	<ul id="ul3">
+		<li><img src="img/angle.png" alt=""></li>
+		<li><img src="img/sword.png" alt=""></li>
+		<li><img src="img/ayeni.jpg" alt=""></li>
+	</ul>	
+	</div>
+	<script>
+	var ul3=document.getElementById('ul3');
+	var oli=ul3.getElementsByTagName('li');
+	ul3.innerHTML+=ul3.innerHTML;
+	ul3.style.width=oli[0].offsetWidth*oli.length+5+'px';
+	setInterval(function (argument) {
+		ul3.style.left=ul3.offsetLeft-3+'px';
+		if(ul3.offsetLeft<-ul3.offsetWidth/2){
+			ul3.style.left=0
+		}
+	},30)
+	</script>
+	<pre>
+	&lt;script&gt;
+	var ul3=document.getElementById('ul3');
+	var oli=ul3.getElementsByTagName('li');
+	ul3.innerHTML+=ul3.innerHTML; 无缝切换起码有两套完全相同的列表
+	ul3.style.width=oli[0].offsetWidth*oli.length+5+'px'; 因为火狐诡异的兼容问题需要多5像素 UL的宽度为所有项的宽度和
+	setInterval(function (argument) {
+		ul3.style.left=ul3.offsetLeft-3+'px'; 
+		if(ul3.offsetLeft&lt;-ul3.offsetWidth/2){ 判断是否为切换的那个定位值，是就重置位置
+			ul3.style.left=0
+		}
+	},30)
+	&lt;/script&gt;
+	</pre>
+	<style>
+		#bigbox5{position: relative;margin: 0px auto;overflow:hidden;width: 770px;height: 400px;border: 1px solid lime}
+		#ul4{list-style: none;border: 1px solid orange;position: absolute;top:0px;left:0px;padding: 0px}
+		#ul4 li{float: left;background:aqua;padding: 0px;margin: 0px}
+		#ul4 li img{}
+	</style>
+	<button id="let">left</button>
+	<button id="rit">right</button>
+	<div id="bigbox5">
+	<ul id="ul4">
+		<li><img src="img/angle.png" alt=""></li>
+		<li><img src="img/sword.png" alt=""></li>
+		<li><img src="img/ayeni.jpg" alt=""></li>
+	</ul>	
+	</div>
+	<script>
+	var let=document.getElementById('let');
+	var rit=document.getElementById('rit');
+	var ul4=document.getElementById('ul4');
+	var ali=ul4.getElementsByTagName('li');
+	var ipseed=-3;
+	
+	ul4.innerHTML+=ul4.innerHTML;
+	let.onclick=function (argument) {
+		ipseed=3;
+	}
+	rit.onclick=function (argument) {
+		ipseed=-3
+	}
+	bigbox5.onmouseout=function (argument) {
+		timer1=setInterval(function (argument) {
+		ul4.style.left=ul4.offsetLeft+ipseed+'px';
+		if(ul4.offsetLeft<-ul4.offsetWidth/2){
+			ul4.style.left='0px';
+		}else if(ul4.offsetLeft>0){
+			ul4.style.left=-ul4.offsetWidth/2+'px';
+		}
+	},30)
+	}
+	bigbox5.onmouseover=function (argument) {
+		clearInterval(timer1)
+	}
+	ul4.style.width=ali[0].offsetWidth*ali.length+5+'px';
+	timer1=setInterval(function (argument) {
+		ul4.style.left=ul4.offsetLeft+ipseed+'px';
+		if(ul4.offsetLeft<-ul4.offsetWidth/2){
+			ul4.style.left='0px';
+		}else if(ul4.offsetLeft>0){
+			ul4.style.left=-ul4.offsetWidth/2+'px';
+		}
+	},30)
+	</script>
+	<pre>
+	&lt;script&gt;
+	var let=document.getElementById('let');
+	var rit=document.getElementById('rit');
+	var ul4=document.getElementById('ul4');
+	var ali=ul4.getElementsByTagName('li');
+	var ipseed=-3;
+	ul4.innerHTML+=ul4.innerHTML;
+	let.onclick=function (argument) {
+		ipseed=3;
+	}
+	rit.onclick=function (argument) {
+		ipseed=-3
+	}
+	bigbox5.onmouseout=function (argument) {
+		timer1
+	}
+	bigbox5.onmouseover=function (argument) {
+		clearInterval(timer1)
+	}
+	ul4.style.width=ali[0].offsetWidth*ali.length+5+'px';
+	timer1=setInterval(function (argument) {
+		ul4.style.left=ul4.offsetLeft+ipseed+'px';
+		if(ul4.offsetLeft<-ul4.offsetWidth/2){
+			ul4.style.left='0px';
+		}else if(ul4.offsetLeft&gt;0){
+			ul4.style.left=-ul4.offsetWidth/2+'px';
+		}
+	},30)
+	&lt;/script&gt;
+	</pre>
+	<hr>
+	<div id="bigbox6">	
+	<span>12</span><p>12</p>
+	<span>zsf</span><p>12</p>
+	<span>14.2</span><p>12</p>
+	<span>true</span><p>12</p>
+	<span>function(){}</span><p>12</p>
+	<span>var f;</span><p>12</p>
+	<span>杂乱的比如new Date()</span><p>12</p>
+	<mark>以下是有关parseInt转换成数字的,等于在里面提取前面的数字侦测直到一个不是数字的为止</mark><br>	
+	<span>'12px'+1</span><p>13</p>
+	<span>12px+1</span><p>13</p>
+	<span>12px13px+1</span><p>13</p>
+	<span>abs</span><p>13</p>
+	<span>abs67</span><p>13</p>
+	<span>12.3</span><p>100</p>
+	<mark>一种变量最好只存一种类型的数据,还有个parseFloat</mark>
+	</div>
+	<script>
+	var bigbox6=document.getElementById('bigbox6');
+	var p12=bigbox6.getElementsByTagName('p');
+	var a=12;
+	p12[0].innerHTML=(typeof a);
+	var b='zsf';
+	p12[1].innerHTML=(typeof b);
+	var c=14.2;
+	p12[2].innerHTML=(typeof c);
+	var d=true;
+	p12[3].innerHTML=(typeof d);
+	var e=function function_name (argument) {
+		document.write('');
+	}
+	p12[4].innerHTML=(typeof e);
+	var f;
+	p12[5].innerHTML=(typeof f);
+	var g=new Date();
+	p12[6].innerHTML=(typeof g);
+	var h='12px';
+	p12[7].innerHTML=h+1;
+	var j=parseInt('12px');
+	p12[8].innerHTML=j+1;
+	var k=parseInt('12px13px');
+	p12[9].innerHTML=k+1;
+	var l=parseInt('abs');
+	p12[10].innerHTML=l+1;
+	var m=parseInt('abs67');
+	p12[11].innerHTML=m+1;
+	var n=parseInt('12.3');
+	p12[12].innerHTML=n+1;
+	</script>
+	<hr>
+	<style>
+		input{margin:10px;}
+	</style>
+	<pre>	
+	&lt;script&gt;
+	var bigbox6=document.getElementById('bigbox6');
+	var p12=bigbox6.getElementsByTagName('p');
+	var a=12;
+	p12[0].innerHTML=(typeof a);
+	var b='zsf';
+	p12[1].innerHTML=(typeof b);
+	var c=14.2;
+	p12[2].innerHTML=(typeof c);
+	var d=true;
+	p12[3].innerHTML=(typeof d);
+	var e=function function_name (argument) {
+		document.write('');
+	}
+	p12[4].innerHTML=(typeof e);
+	var f;
+	p12[5].innerHTML=(typeof f);
+	var g=new Date();
+	p12[6].innerHTML=(typeof g);
+	var h='12px';
+	p12[7].innerHTML=h+1;
+	var j=parseInt('12px');
+	p12[8].innerHTML=j+1;
+	var k=parseInt('12px13px');
+	p12[9].innerHTML=k+1;
+	var l=parseInt('abs');
+	p12[10].innerHTML=l+1;
+	var m=parseInt('abs67');
+	p12[11].innerHTML=m+1;
+	var n=parseInt('12.3');
+	p12[12].innerHTML=n+1;
+	&lt;/script&gt;	
+	</pre>
+	<input type="text">+<input type="text"><button>=</button><input type="text">
+	<p>	好吧，上面的是假的，，</p>
+	<input type="text">+<input type="text"><button>=</button><input type="text">
+	<p>	加减乘除照办</p>
+	<input type="text">/<input type="text"><button>=</button><input type="text">
+	<p>数组排序的时候一定要用%</p>
+	<input type="text">%<input type="text"><button>=</button><input type="text">
+	<script>	
+		var input=document.getElementsByTagName('input');
+		var btn=document.getElementsByTagName('button');
+		btn[6].onclick=function (argument) {
+			input[2].value=input[0].value+input[1].value;
+		}
+		btn[7].onclick=function (argument) {
+			input[5].value=parseInt(input[3].value)+parseInt(input[4].value);
+		}
+		btn[8].onclick=function (argument) {
+			input[8].value=parseInt(input[6].value)/parseInt(input[7].value);
+		}
+		btn[9].onclick=function (argument) {
+			input[11].value=parseInt(input[9].value)%parseInt(input[10].value);
+		}
+	</script>
+	<pre>
+		&lt;script&gt;	
+		var input=document.getElementsByTagName('input');
+		var btn=document.getElementsByTagName('button');
+		btn[6].onclick=function (argument) {
+			input[2].value=input[0].value+input[1].value;
+		}
+		btn[7].onclick=function (argument) {
+			input[5].value=parseInt(input[3].value)+parseInt(input[4].value);
+		}
+		btn[8].onclick=function (argument) {
+			input[8].value=parseInt(input[6].value)/parseInt(input[7].value);
+		}
+		btn[9].onclick=function (argument) {
+			input[11].value=parseInt(input[9].value)%parseInt(input[10].value);
+		}
+		除了+号是要加parseInt转化为数字的，其余可以不用
+		如：input[11].value=parseInt(input[9].value)%parseInt(input[10].value);和input[11].value=input[9].value%input[10].value;是一样的
+	&lt;/script&gt;
+	</pre>
+	<p>关于NAN的一个现象，两个NAN总是不相等的</p>
+	<p>字符串'abc'</p>
+	<p>字符串'ccc'</p>
+	<p>abc==ccc吗</p>
+	<span>结果</span><p id="span">结果是</p>
+	<script>
+	var a="abc";
+	var b="ccc";
+	var span=document.getElementById('span');
+	span.innerHTML=("a"=="b");
+	</script>
+	<input type="text">+<input type="text"><button>=</button><input type="text">
+	<p>如果有数字和字符串相加会提示输入错误</p>
+	<p>'12'和12是相等的</p>
+	<script>
+	btn[10].onclick=function (argument) {
+			var num=parseInt(input[12].value)+parseInt(input[13].value);
+			input[14].value=parseInt(input[12].value)+parseInt(input[13].value);
+			if (isNaN(num)) {
+				alert('您输入的有误')
+			}
+		}
+	</script>
+	<pre>
+	&lt;script&gt;
+	btn[10].onclick=function (argument) {
+			var num=parseInt(input[12].value)+parseInt(input[13].value);
+			input[14].value=parseInt(input[12].value)+parseInt(input[13].value);
+			if (isNaN(num)) {
+				alert('您输入的有误')
+			}
+		}
+	&lt;/script&gt;	
+	</pre>
+	<span>:</span><p id="quanjv"></p>
+	<script>
+	var zxc;
+	var quanjv=document.getElementById('quanjv');
+	function aaa (argument) {
+		zxc=11;
+	}
+	function bbb (argument) {
+		quanjv.innerHTML=zxc;
+	}
+	bbb();
+	aaa();
+	</script>
+	<pre>
+	&lt;script&gt;
+	var zxc;
+	var quanjv=document.getElementById('quanjv');
+	function aaa (argument) {
+		zxc=11;
+	}
+	function bbb (argument) {
+		quanjv.innerHTML=zxc;
+	}
+	bbb();
+	aaa();
+	&lt;/script&gt;	
+	</pre>
+	<span>:</span><p id="quanjv1"></p>
+	全局变量在所有函数都可调用，尽量避免全局变量，JS函数是从上往下执行的
+	<script>
+	var quanjv1=document.getElementById('quanjv1');
+	function ccc (argument) {
+		quanjv1.innerHTML=zxc;
+	}
+	ccc();
+	// aaa();
+	</script>
+	<pre>
+	&lt;script&gt;
+	var quanjv1=document.getElementById('quanjv1');
+	function ccc (argument) {
+		quanjv1.innerHTML=zxc;
+	}
+	ccc();
+	// aaa();
+	</pre>
+<img src="img/mmgf.png" alt="">
+<hr>
+<script>
+	var aArray=[1,2,3,4,];
+	var bIsRight=false;
+	var fPrice=14.5;
+	var fnTurnIt1=function (argument) {
+	};
+	var iInt=1;
+	var oDiv1=document.getElementById('div1');
+	var reEmailofqq=[\b];
+	var sUserName='A higher place';
+</script>
+<pre>
+&lt;script&gt;
+	var aArray=[1,2,3,4,];
+	var bIsRight=false;
+	var fPrice=14.5;
+	var fnTurnIt1=function (argument) {
+		document.write('miaowu?')
+	};
+	var iInt=1;
+	var oDiv1=document.getElementById('div1');
+	var reEmailofqq=[\b];
+	var sUserName='A higher place';
+&lt;/script&gt;	
+</pre>
+<style>
+	#div100{width: 100px;height: 100px;background: LightCyan;border: 1px solid Cyan}
+</style>
+<div id="div100">
+	1秒变换一次背景色的DIV
+</div>
+<script>
+	var oDiv100=document.getElementById('div100');
+	var fnTurnIt=function (argument) {		
+		var nSeconds=new Date().getSeconds();
+			if (nSeconds%2==0) {
+				oDiv100.style.background='Pink'
+			}else{
+				oDiv100.style.background='LightCyan'
+			};	
+	}
+	fnTurnIt();
+	setInterval(fnTurnIt,1000);
+</script>
+<pre>
+&lt;script&t;
+	var oDiv100=document.getElementById('div100');
+	var fnTurnIt=function (argument) {	
+		var nSeconds=new Date().getSeconds();
+			if (nSeconds%2==0) {
+				oDiv100.style.background='Pink'
+			}else{
+				oDiv100.style.background='LightCyan'
+			};	
+	}
+	fnTurnIt();
+	setInterval(fnTurnIt,1000);
+&lt;/script&t;	
+</pre>
+<style>
+	#bigbox8 div,#bigbox7 div,#bigbox9 div,#bigbox10 div,#bigbox11 div{width: 100px;height: 100px;background: GhostWhite;border: 1px solid GreenYellow;float: left;margin: 10px}
+</style>
+<div id="bigbox7">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+<p style="clear:both">每秒下一个DIV的背景色变化(SetInterval)</p>
+<script>
+	var oBigbox7=document.getElementById('bigbox7').getElementsByTagName('div');
+	var nQ=0;
+	setInterval(function (argument) {
+		oBigbox7[nQ].style.background="LightCyan";
+		nQ++;
+	},1000)
+</script>
+<pre style="clear:both">
+&lt;script&gt;
+	var oBigbox7=document.getElementById('bigbox7').getElementsByTagName('div');
+	var nQ=0;
+	setInterval(function (argument) {
+		oBigbox7[nQ].style.background="LightCyan";
+		nQ++;
+	},1000)
+&lt;/script&gt;	
+</pre>
+<div id="bigbox8">
+	<div>第0个DIV</div>
+	<div>第1个DIV</div>
+	<div>第2个DIV</div>
+	<div>第3个DIV</div>
+	<div>第4个DIV</div>
+	<div>第5个DIV</div>
+	<div>第6个DIV</div>
+	<div>第7个DIV</div>
+	<div>第8个DIV</div>
+	<div>第9个DIV</div>
+	<div>第10个DIV</div>
+</div>
+<p style="clear:both">如果i%3并且i%2为0，则第i个DIV的颜色为暖色色</p>
+<script>
+	var oBigbox8=document.getElementById('bigbox8').getElementsByTagName('div');
+	for (var i = 0; i < oBigbox8.length; i++) {
+		if(i%3==0&&i%2==0)
+		oBigbox8[i].style.background='LightCyan';
+	};
+</script>
+<pre>
+&lt;script&gt;
+	var oBigbox8=document.getElementById('bigbox8').getElementsByTagName('div');
+	for (var i = 0; i &lt; oBigbox8.length; i++) {
+		if(i%3==0&&i%2==0)
+		oBigbox8[i].style.background='LightCyan';
+	};
+&lt;/script&gt;	
+</pre>
+<div id="bigbox9">
+	<div>第0个DIV</div>
+	<div>第1个DIV</div>
+	<div>第2个DIV</div>
+	<div>第3个DIV</div>
+	<div>第4个DIV</div>
+	<div>第5个DIV</div>
+	<div>第6个DIV</div>
+	<div>第7个DIV</div>
+	<div>第8个DIV</div>
+	<div>第9个DIV</div>
+	<div>第10个DIV</div>
+</div>
+<p style="clear:both">如果i%3或i%2为0，则第i个DIV的颜色为暖色</p>
+<script>
+	var oBigbox9=document.getElementById('bigbox9').getElementsByTagName('div');
+	for (var i = 0; i < oBigbox9.length; i++) {
+		if(i%3==0||i%2==0)
+		oBigbox9[i].style.background='LightCyan';
+	};
+</script>
+<pre>
+&lt;script&gt;
+	var oBigbox9=document.getElementById('bigbox9').getElementsByTagName('div');
+	for (var i = 0; i &lt; oBigbox9.length; i++) {
+		if(i%3==0||i%2==0)
+		oBigbox9[i].style.background='LightCyan';
+	};
+&lt;/script&gt;	
+</pre>
+<div id="bigbox10">
+	<div>第0个DIV</div>
+	<div>第1个DIV</div>
+	<div>第2个DIV</div>
+	<div>第3个DIV</div>
+	<div>第4个DIV</div>
+	<div>第5个DIV</div>
+	<div>第6个DIV</div>
+	<div>第7个DIV</div>
+	<div>第8个DIV</div>
+	<div>第9个DIV</div>
+	<div>第10个DIV</div>
+</div>
+<p style="clear:both">Switch根据情况定义</p>
+<script>
+var oBigbox10=document.getElementById('bigbox10').getElementsByTagName('div');
+for (var nE = 0; nE < oBigbox10.length; nE++) {
+	switch(nE){
+		case 1:oBigbox10[nE].style.background="aqua";break;
+		case 2:oBigbox10[nE].style.background="pink";break;
+		case 8:oBigbox10[nE].style.background="yellow";break;
+		// case yy:oBigbox10[nE].style.background="aqua";break;
+	}
+};
+</script>
+<pre>
+&lt;script&gt;
+var oBigbox10=document.getElementById('bigbox10').getElementsByTagName('div');
+for (var nE = 0; nE &lt; oBigbox10.length; nE++) {
+	switch(nE){
+		case 1:oBigbox10[nE].style.background="aqua";break;
+		case 2:oBigbox10[nE].style.background="pink";break;
+		case 8:oBigbox10[nE].style.background="yellow";break;
+		// case yy:oBigbox10[nE].style.background="aqua";break;没这个情况就别写了，
+	}
+}
+&lt;/script&gt;
+</pre>
+<div id="bigbox11">
+	<div>第0个DIV</div>
+	<div>第1个DIV</div>
+	<div>第2个DIV</div>
+	<div>第3个DIV</div>
+	<div>第4个DIV</div>
+	<div>第5个DIV</div>
+	<div>第6个DIV</div>
+	<div>第7个DIV</div>
+	<div>第8个DIV</div>
+	<div>第9个DIV</div>
+	<div>第10个DIV</div>
+</div>
+<script>
+	var oBigbox11=document.getElementById('bigbox11').getElementsByTagName('div');
+	for (var i = 0; i < oBigbox11.length; i++) {
+		if (i==1) {
+			continue;
+		};
+		if (i==4) {
+			continue;
+		};
+		if (i==7) {
+			break;
+		};
+		oBigbox11[i].style.background='LightCyan';
+	};
+</script>
+<pre style="clear:both">
+&lt;script&gt;
+	var oBigbox11=document.getElementById('bigbox11').getElementsByTagName('div');
+	for (var i = 0; i &lt; oBigbox11.length; i++) {
+		if (i==1) {
+			continue;
+		};
+		if (i==4) {
+			continue;
+		};
+		continue是终止本次，继续下面
+		if (i==7) {
+			break;
+		};
+		break是终止;
+		函数是从上往下执行的，判断要写在上面最好
+		oBigbox11[i].style.background='LightCyan';
+	};
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>什么是真，什么是假</p>
+<p>true:非零数字，非空字符串，非空对象</p>
+<p>false:数字零，空字符串，空对象,undefinded</p>
+<input type="text" id="inputo">
+<button id="btno">click me!</button>
+<br>
+<mark>input里的值为0返回true，而在函数定义的0返回false,比如var nH=0，返回false</mark>
+<script>
+var oInputo=document.getElementById('inputo');
+var oBtno=document.getElementById('btno');
+	oBtno.onclick=function (argument) {
+		if (oInputo.value) {
+			alert('真的')
+		}else{
+			alert('假的')
+		};
+	}
+</script>
+<pre>
+&lt;script&gt;
+var oInputo=document.getElementById('inputo');
+var oBtno=document.getElementById('btno');
+	oBtno.onclick=function (argument) {
+		if (oInputo.value) {
+			alert('真的')
+		}else{
+			alert('假的')
+		};
+	}
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>JSON</p>
+<p id="jso"></p>
+<script>
+	var obj={oQ:1,oW:2,oE:3,oR:'zsf',oT:['q','w','e','r'],oY:[4,5,6,7]};
+	var oJson=document.getElementById('jso');
+	oJson.innerHTML='提取JSON的数据为：'+obj.oT[1];
+</script>
+<pre>
+&lt;script&gt;
+	var obj={oQ:1,oW:2,oE:3,oR:'zsf',oT:['q','w','e','r'],oY:[4,5,6,7]};
+	var oJson=document.getElementById('jso');
+	oJson.innerHTML='提取JSON的数据为：'+obj.oT[1];
+&lt;/script&gt;	
+</pre>
+<style>
+	#divjson{width: 400px;background: LightCyan;border: 1px solid orange;margin:20px auto;}
+</style>
+<div id="divjson">
+<nav id="nav">
+	<ul class="nav nav-tabs">
+		<li><a href="javascript:;"></a></li>
+		<li><a href="javascript:;"></a></li>
+		<li><a href="javascript:;"></a></li>
+	</ul>
+</nav>
+<h6 style="text-align:center" id="header"></h6>
+	<div id="main"></div>
+	<footer style="border-top:1px solid orange" id="footer">
+		<h5></h5>
+	</footer>
+</div>
+<p>用json加载数据的原初思路</p>
+<script>
+	var oJson1={nav:['index','about us','home'],header:'Lorem ipsum dolor sit.',content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ea iure repellat aliquid aliquam harum dicta pariatur veniam omnis! Iste perferendis magni, neque autem tempore vero cumque aliquid suscipit non.',footer:'Lorem ipsum dolor sit amet.'}
+	var oNav=document.getElementById('nav');
+	var oHeader=document.getElementById('header');
+	var oMain=document.getElementById('main');
+	var oFooter=document.getElementById('footer');
+	oNav.getElementsByTagName('li')[0].getElementsByTagName('a')[0].innerHTML=oJson1.nav[0];
+	oNav.getElementsByTagName('li')[1].getElementsByTagName('a')[0].innerHTML=oJson1.nav[1];
+	oNav.getElementsByTagName('li')[2].getElementsByTagName('a')[0].innerHTML=oJson1.nav[2];
+	oHeader.innerHTML=oJson1.header;
+	oMain.innerHTML=oJson1.content;
+	oFooter.getElementsByTagName('h5')[0]. innerHTML=oJson1.footer;
+</script>
+<pre>
+&lt;style&gt;
+	#divjson{width: 400px;background: LightCyan;border: 1px solid orange;margin:20px auto;}
+&lt;/style&gt;
+&lt;div id="divjson"&gt;
+&lt;nav id="nav"&gt;
+	&lt;ul class="nav nav-tabs"&gt;
+		&lt;li&gt;&lt;a href="javascript:;"&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="javascript:;"&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="javascript:;"&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h6 style="text-align:center" id="header"&gt;&lt;/h6&gt;
+	&lt;div id="main"&gt;&lt;/div&gt;
+	&lt;footer style="border-top:1px solid orange" id="footer"&gt;
+		&lt;h5&gt;&lt;/h5&gt;
+	&lt;/footer&gt;
+&lt;/div&gt;
+&lt;script&gt;
+	var oJson1={nav:['index','about us','home'],header:'Lorem ipsum dolor sit.',content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ea iure repellat aliquid aliquam harum dicta pariatur veniam omnis! Iste perferendis magni, neque autem tempore vero cumque aliquid suscipit non.',footer:'Lorem ipsum dolor sit amet.'}
+	var oNav=document.getElementById('nav');
+	var oHeader=document.getElementById('header');
+	var oMain=document.getElementById('main');
+	var oFooter=document.getElementById('footer');
+	oNav.getElementsByTagName('li')[0].getElementsByTagName('a')[0].innerHTML=oJson1.nav[0];
+	oNav.getElementsByTagName('li')[1].getElementsByTagName('a')[0].innerHTML=oJson1.nav[1];
+	oNav.getElementsByTagName('li')[2].getElementsByTagName('a')[0].innerHTML=oJson1.nav[2];
+	oHeader.innerHTML=oJson1.header;
+	oMain.innerHTML=oJson1.content;
+	oFooter.getElementsByTagName('h5')[0]. innerHTML=oJson1.footer;
+&lt;/script&gt;	
+</pre>
+<style>
+	#divjson1{background: LightCyan;border: 1px solid orange;display: inline-block;padding: 20px;}
+</style>
+<div id="divjson1">
+	<img src="" alt="" id="imgjson">
+	<h5>
+		<footer></footer>
+	</h5>
+</div>
+<p>数组里嵌套JSON</p>
+<script>
+var oImgJson=document.getElementById('imgjson');
+var oDivjson1=document.getElementById('divjson1');
+var oJson2=[{img:'img/sword.png',footer:'Lost star'},{img:'img/sword2.png',footer:'Please Dont go'}];
+oImgJson.src=oJson2[0].img;
+oDivjson1.getElementsByTagName('footer')[0].innerHTML=oJson2[1].footer;
+</script>
+<pre>
+&lt;div id="divjson1"&gt;
+	&lt;img src="" alt="" id="imgjson"&gt;
+	&lt;h5&gt;
+		&lt;footer&gt;&lt;/footer&gt;
+	&lt;/h5&gt;
+&lt;/div&gt;
+&lt;script&gt;
+var oImgJson=document.getElementById('imgjson');
+var oDivjson1=document.getElementById('divjson1');
+var oJson2=[{img:'img/sword.png',footer:'Lost star'},{img:'img/sword2.png',footer:'Please Dont go'}];
+//var oJson2=[
+//		{img:'img/sword.png',footer:'Lost star'},
+//		{img:'img/sword2.png',footer:'Please Dont go'}
+//	];
+oImgJson.src=oJson2[0].img;
+oDivjson1.getElementsByTagName('footer')[0].innerHTML=oJson2[1].footer;
+&lt;/script&gt;	
+</pre>
+<hr>
+<button>alert(attr)</button>
+<p>for in 这个JSON数组里的东西是两个{},{}所以弹出的是0和1</p>
+<script>
+	var oJson3=[{header:'sleep',content:'just',footer:'Swift'},{header:'weak up',content:'morning',footer:'Soul'}];
+	var attr='';
+	btn[12].onclick=function (argument) {		
+		for(attr in oJson3){
+			alert(attr)
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var oJson3=[{header:'sleep',content:'just',footer:'Swift'},{header:'weak up',content:'morning',footer:'Soul'}];
+	var attr='';
+	btn[12].onclick=function (argument) {		
+		for(attr in oJson3){
+			alert(attr)
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<button>alert(attr1)</button>
+<p>for in 这个JSON数组里的东西是youknow,header,content,footer,可以结合使用</p>
+<script>
+	var oJson4={youknow:'what HELL',header:'weak up',content:'morning',footer:'Soul'};
+	var attr1='';
+	btn[13].onclick=function (argument) {		
+		for(attr1 in oJson4){
+			alert(attr1+'='+oJson4[attr1])
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var oJson4={youknow:'what HELL',header:'weak up',content:'morning',footer:'Soul'};
+	var attr1='';
+	btn[13].onclick=function (argument) {		
+		for(attr1 in oJson4){
+			alert(attr1+'='+oJson4[attr1])
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<hr>
+<h5>函数传参</h5>
+<pre>
+	最简单的函数传参
+&lt;script&gt;
+	function jiafa(a,b){
+		return a+b;
+	}
+	alert(jiafa(3,8))
+&lt;/script&gt;	
+</pre>
+<style>
+	.ready{outline: 1px solid orange}
+</style>
+<input type="text"><button class="ready">+</button><button>-</button><button>*</button><button>/</button>
+<input type="text"><button>=</button>
+<input type="text">
+<script>
+	for (var i = 14; i < 18; i++) {
+		btn[i].onclick=function (argument) {
+			for (var j = 14; j < 18; j++) {
+				btn[j].className='';
+			};
+			this.className='ready';
+		}
+	};
+	function jiafa(a,b){
+		var a=parseInt(input[16].value);
+		var b=parseInt(input[17].value);
+		return a+b;
+	}
+	function jianfa(argument) {
+		var a=input[16].value;
+		var b=input[17].value;
+		return a-b;
+	}
+	function cheng(argument) {
+		var a=input[16].value;
+		var b=input[17].value;
+		return a*b;
+	}
+	function chu(argument) {
+		var a=input[16].value;
+		var b=input[17].value;
+		return a/b;
+	}
+	btn[18].onclick=function () {
+		if (btn[14].className=='ready') {			
+		input[18].value=jiafa()
+		}else if(btn[15].className=='ready'){
+		input[18].value=jianfa()
+		}else if(btn[16].className=='ready'){
+		input[18].value=cheng()
+		}else if(btn[17].className=='ready'){
+		input[18].value=chu()
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	for (var i = 14; i < 18; i++) {
+		btn[i].onclick=function (argument) {
+			for (var j = 14; j < 18; j++) {
+				btn[j].className='';
+			};
+			this.className='ready';
+		}
+	};
+	function jiafa(a,b){
+		var a=parseInt(input[16].value);
+		var b=parseInt(input[17].value);
+		return a+b;
+	}
+	function jianfa(argument) {
+		var a=input[16].value;
+		var b=input[17].value;
+		return a-b;
+	}
+	function cheng(argument) {
+		var a=input[16].value;
+		var b=input[17].value;
+		return a*b;
+	}
+	function chu(argument) {
+		var a=input[16].value;
+		var b=input[17].value;
+		return a/b;
+	}
+	btn[18].onclick=function () {
+		if (btn[14].className=='ready') {			
+		input[18].value=jiafa()
+		}else if(btn[15].className=='ready'){
+		input[18].value=jianfa()
+		}else if(btn[16].className=='ready'){
+		input[18].value=cheng()
+		}else if(btn[17].className=='ready'){
+		input[18].value=chu()
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>函数返回值</p>
+<button>click me !</button>
+<script>
+	function hanshu(){
+		var a='你是干什么的';
+		var b='我是来搞事的';
+		return a+":"+b;
+	}
+	btn[19].onclick=function (argument) {
+		alert(hanshu());
+	}
+</script>
+<pre>
+&lt;script&gt;
+	function hanshu(){
+		var a='你是干什么的';
+		var b='我是来搞事的';
+		return a+":"+b;
+	}
+	btn[19].onclick=function (argument) {
+		alert(hanshu());
+	}
+&lt;/script&gt;	
+</pre>
+<input type="text"><input type="submit" value="submit">
+<script>
+input[20].onclick=function (argument) {
+	if(input[19].value==""){
+		return;
+		alert('miaowu?')
+	}else{
+		alert('success')
+	}
+}
+</script>
+<pre>
+&lt;input type="text"&gt;&lt;input type="submit" value="submit"&gt;
+&lt;script&gt;
+input[20].onclick=function (argument) {
+	if(input[19].value==""){
+		return;  //其实加不加return唯一的区别是
+		alert('miaowu?')   //你加了return，return后面的不会执行,也就是这个弹框不会执行了
+	}else{
+		alert('success')
+	}
+}
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>Arguments,可变参,也就是不定参</p>
+<p id="arp"></p>
+<script>
+var arp=document.getElementById('arp');
+	function shao() {
+		arp.innerHTML=(arguments[1])
+	}
+	shao(100,300,299);
+</script>
+<pre>
+&lt;script&gt;
+var arp=document.getElementById('arp');
+	function shao() {
+		arp.innerHTML=(arguments[1])
+	}
+	shao(100,300,299);
+&lt;/script&gt;	
+</pre>
+<div id="arp1"></div>
+<script>
+var arp1=document.getElementById('arp1');
+	function mi(){
+		var result=0;
+		for (var i = 0; i < arguments.length; i++) {
+			result+=arguments[i];
+		};
+		arp1.innerHTML='设定了参数34,434,334,234,1，相加得出结果：'+result;
+	}
+	mi(34,434,334,234,1);
+</script>
+<pre>
+&lt;script&gt;
+var arp1=document.getElementById('arp1');
+	function mi(){
+		var result=0;
+		for (var i = 0; i &lt; arguments.length; i++) {
+			result+=arguments[i];
+		};
+		arp1.innerHTML='设定了参数34,434,334,234,1，相加得出结果：'+result;
+	}
+	mi(34,434,334,234,1);
+&lt;/script&gt;	
+</pre>
+<hr>
+<style>
+	#div9{border: 1px solid pink;background: HoneyDew;width: 100px;height: 100px;margin: 10px}
+	#div10{border: 1px solid pink;background: HoneyDew;width: 100px;height: 100px;margin: 10px}
+	body{background: white}
+</style>
+<div id="div9">
+	
+</div>
+<div id="div10">
+	
+</div>
+<button id="exbth">改变</button>
+<script>
+var oExbtn=document.getElementById('exbth');
+var oDiv9=document.getElementById('div9');
+var oDiv10=document.getElementById('div10');
+var body=document.getElementsByTagName('body')[0];
+	function changeBG(){
+		if(arguments.length==3){
+			arguments[0].style[arguments[1]]=arguments[2];
+		}else if(arguments.length==2){
+			return getStyle(arguments[0],arguments[1]);//这个函数在下面橙色DIV的下面详细说明
+		}
+	}
+oExbtn.onclick=function(){
+	changeBG(oDiv9,"background","pink");
+	changeBG(oDiv9,"border","1px solid orange");
+	changeBG(oDiv10,"border","1px solid lime");
+	changeBG(body,"border","2px solid lime");
+	// alert(getComputedStyle(body,false).width);
+	//  var oStyle = getComputedStyle(body,false).background;
+	//  alert(oStyle);
+	alert(changeBG(body,"width"));
+}
+</script>
+<pre>
+&lt;script&gt;
+var oExbtn=document.getElementById('exbth');
+var oDiv9=document.getElementById('div9');
+var oDiv10=document.getElementById('div10');
+var body=document.getElementsByTagName('body')[0];
+	function changeBG(){
+		if(arguments.length==3){
+			arguments[0].style[arguments[1]]=arguments[2];
+		}else if(arguments.length==2){
+			return getStyle(arguments[0],arguments[1]);
+		}
+	}
+oExbtn.onclick=function(){
+	changeBG(oDiv9,"background","pink");
+	changeBG(oDiv9,"border","1px solid orange");
+	changeBG(oDiv10,"border","1px solid lime");
+	changeBG(body,"border","2px solid lime");
+	alert(getComputedStyle(body,false).width);
+	 var oStyle = getComputedStyle(body,false).background;
+	 alert(oStyle);
+	//style只能提取行内样式
+}
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>解除了兼容性的currentStyle与getComputedStyle</p>
+<div id="div11"></div>
+<button id="agbtn">click me !，弹出这个DIV的宽度</button>
+<style>
+	#div11{width: 100px;height: 100px;margin: 10px;background: pink;outline: 1px solid lime}
+</style>
+<script>
+	var oDiv11=document.getElementById('div11');
+	var oAgbth=document.getElementById('agbtn');
+	//IE（其它浏览器直接报错，不会弹出UNDIFINDED）
+	// alert(oDiv11.currentStyle.width);
+	//FF
+	// alert(getComputedStyle(oDiv11,false).width);
+	oAgbth.onclick=function (argument) {
+	if(oDiv11.currentStyle){
+		//IE
+		alert(oDiv11.currentStyle.width)
+		}else{
+			alert(getComputedStyle(oDiv11,false).width)
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var oDiv11=document.getElementById('div11');
+	var oAgbth=document.getElementById('agbtn');
+	//IE（其它浏览器直接报错，不会弹出UNDIFINDED）
+	// alert(oDiv11.currentStyle.width);
+	//FF
+	// alert(getComputedStyle(oDiv11,false).width);
+	oAgbth.onclick=function (argument) {
+	if(oDiv11.currentStyle){
+		//IE
+		alert(oDiv11.currentStyle.width)
+		}else{
+			alert(getComputedStyle(oDiv11,false).width)
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<hr>
+<style>
+	#bigbox12{padding: 10px ;border:1px solid orange;}
+</style>
+<p>构造获取属性的函数</p>
+<div id="bigbox12"></div>
+<script>
+var oBigbox12=document.getElementById('bigbox12');
+	function getStyle (objec,attr) {
+		if(objec.currentStyle){
+			return objec.currentStyle[attr];
+		}else{
+			return getComputedStyle(objec,false)[attr];
+		}
+	}
+	oBigbox12.innerHTML+='<p>这个DIV的字体属性为'+getStyle(oBigbox12,'font')+'</p>';
+	oBigbox12.innerHTML+='<p>这个DIV的背景属性为'+getStyle(oBigbox12,'background')+'</p>';
+	oBigbox12.innerHTML+='<p>这个DIV的宽度为'+getStyle(oBigbox12,'width')+'(因为DIV宽度没定义默认是百分百所以宽度随窗口变化而变化)</p>';	
+</script>
+<pre>
+&lt;script&gt;
+var oBigbox12=document.getElementById('bigbox12');
+	function getStyle (objec,attr) {
+		if(objec.currentStyle){
+			return objec.currentStyle[attr];
+		}else{
+			return getComputedStyle(objec,false)[attr];
+		}
+	}
+	oBigbox12.innerHTML+='&lt;p&gt;这个DIV的字体属性为'+getStyle(oBigbox12,'font')+'&lt;/p&gt;';
+	oBigbox12.innerHTML+='&lt;p&gt;这个DIV的背景属性为'+getStyle(oBigbox12,'background')+'&lt;/p&gt;';
+	oBigbox12.innerHTML+='&lt;p&gt;这个DIV的宽度为'+getStyle(oBigbox12,'width')+'(因为DIV宽度没定义默认是百分百所以宽度随窗口变化而变化)&lt;/p&gt;';	
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>Arguments函数的缺点</p>
+<p id="jakedian">1</p>
+<script>
+var oJakedian=document.getElementById('jakedian');
+	function suanshu(){
+		if(arguments.length==2){
+			return arguments[0]+arguments[1];
+		}else if(arguments.length==3){
+			return arguments[0]-arguments[1]-arguments[2];
+		}
+	}
+	oJakedian.innerHTML='第一个函数的结果：'+suanshu(14,15,16);
+	function  jiajian(a,b,c) {
+		if(arguments.length==2){
+			return a+b;
+		}else if(arguments.length==3){
+			return a-b-c;
+		}
+	}
+	oJakedian.innerHTML+='第二个函数的结果：'+jiajian(14,15,16);
+	oJakedian.innerHTML+='所以这个两个函数是一样的，所以为了方便，用参数的形式'
+</script>
+<pre>
+&lt;p&gt;Arguments函数的缺点&lt;/p&gt;
+&lt;p id="jakedian"&gt;1&lt;/p&gt;
+&lt;script&gt;
+var oJakedian=document.getElementById('jakedian');
+	function suanshu(){
+		if(arguments.length==2){
+			return arguments[0]+arguments[1];
+		}else if(arguments.length==3){
+			return arguments[0]-arguments[1]-arguments[2];
+		}
+	}
+	oJakedian.innerHTML='第一个函数的结果：'+suanshu(14,15,16);
+	function  jiajian(a,b,c) {
+		if(arguments.length==2){
+			return a+b;
+		}else if(arguments.length==3){
+			return a-b-c;
+		}
+	}
+	oJakedian.innerHTML+='第二个函数的结果：'+jiajian(14,15,16);
+	oJakedian.innerHTML+='所以这个两个函数是一样的，所以为了方便，用参数的形式'
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>数组Array</p>
+<div id="bigbox13"></div>
+<p>没有任何区别，但因为代码少效率高所以建议用第一种</p>
+<script>
+	var oBigbox13=document.getElementById('bigbox13');
+	var aArray=[19,17,24,129];
+	var aArray_1= new Array(100,200,300,400);
+	oBigbox13.innerHTML+=aArray[0]+'<br />';
+	oBigbox13.innerHTML+=aArray_1[0]+'<br />';
+	aArray.length=3;
+	oBigbox13.innerHTML+=aArray+'<br />';
+	aArray.length=4;
+	oBigbox13.innerHTML+=aArray+'<br />';
+	aArray.length=25;
+	oBigbox13.innerHTML+=aArray+'<br />';
+	var aArray_2=[5,2,3,5,8];
+	aArray_2.push(12,13,14);
+	oBigbox13.innerHTML+='push:'+aArray_2+'<br />';
+	aArray_2.unshift(-3,-2,-1);
+	oBigbox13.innerHTML+='unshift:'+aArray_2+'<br />';
+	aArray_2.pop();
+	oBigbox13.innerHTML+='pop:'+aArray_2+'<br />';
+	aArray_2.shift();
+	oBigbox13.innerHTML+='shift:'+aArray_2+'<br />';
+	aArray_2.sort();
+	oBigbox13.innerHTML+='unshift:'+aArray_2+'<br />';
+	function so(num1,num2){
+		return num1-num2;
+	}
+	oBigbox13.innerHTML+='排序修改:'+aArray_2.sort(so)+'<br />';
+	var aArray_3=[41,44,42];
+	oBigbox13.innerHTML+='concat:'+aArray_2.concat(aArray_3)+'<br />';
+	oBigbox13.innerHTML+='join:'+aArray_2.join('miss')+'<br />';
+	oBigbox13.innerHTML+='join和split:'+aArray_2.join('miss').split('mis')+'<br />';
+	var aArray_4=[2,4,6,8,10,12,14,16];
+	oBigbox13.innerHTML+='aArray_4是：'+aArray_4+'<br />';
+	aArray_4.splice(3,1);
+	oBigbox13.innerHTML+='splice两个参数：'+aArray_4+'<br />';
+	var aArray_4=[2,4,6,8,10,12,14,16];
+	aArray_4.splice(3,1,4,4,4,4);
+	oBigbox13.innerHTML+='splice多个参数：'+aArray_4+'<br />';
+	var aArray_5=[4,3,6,1,54,12,1];
+	aArray_5.reverse();
+	oBigbox13.innerHTML+='reverse：'+aArray_5+'<br />';
+</script>
+<pre>
+&lt;script&gt;
+	var oBigbox13=document.getElementById('bigbox13');
+	var aArray=[19,17,24,129];
+	var aArray_1= new Array(100,200,300,400);
+	oBigbox13.innerHTML+=aArray[0]+'&lt;br /&gt;';
+	oBigbox13.innerHTML+=aArray_1[0]+'&lt;br /&gt;';
+	aArray.length=3;
+	oBigbox13.innerHTML+=aArray+'&lt;br /&gt;';
+	aArray.length=4;
+	oBigbox13.innerHTML+=aArray+'&lt;br /&gt;';
+	aArray.length=25;
+	oBigbox13.innerHTML+=aArray+'&lt;br /&gt;';
+	var aArray_2=[5,2,3,5,8];
+	aArray_2.push(12,13,14);
+	oBigbox13.innerHTML+='push:'+aArray_2+'&lt;br /&gt;';
+	aArray_2.unshift(-3,-2,-1);
+	oBigbox13.innerHTML+='unshift:'+aArray_2+'&lt;br /&gt;';
+	aArray_2.pop();
+	oBigbox13.innerHTML+='pop:'+aArray_2+'&lt;br /&gt;';
+	aArray_2.shift();
+	oBigbox13.innerHTML+='shift:'+aArray_2+'&lt;br /&gt;';
+	aArray_2.sort();
+	oBigbox13.innerHTML+='unshift:'+aArray_2+'&lt;br /&gt;';
+	function so(num1,num2){
+		return num1-num2;
+	}
+	oBigbox13.innerHTML+='排序修改:'+aArray_2.sort(so)+'&lt;br /&gt;';
+	var aArray_3=[41,44,42];
+	oBigbox13.innerHTML+='concat:'+aArray_2.concat(aArray_3)+'&lt;br /&gt;';
+	oBigbox13.innerHTML+='join:'+aArray_2.join('miss')+'&lt;br /&gt;';
+	oBigbox13.innerHTML+='join和split:'+aArray_2.join('miss').split('mis')+'&lt;br /&gt;';
+	var aArray_4=[2,4,6,8,10,12,14,16];
+	oBigbox13.innerHTML+='aArray_4是：'+aArray_4+'&lt;br /&gt;';
+	aArray_4.splice(3,1);
+	oBigbox13.innerHTML+='splice两个参数：'+aArray_4+'&lt;br /&gt;';
+	var aArray_4=[2,4,6,8,10,12,14,16];
+	aArray_4.splice(3,1,4,4,4,4);
+	oBigbox13.innerHTML+='splice多个参数：'+aArray_4+'&lt;br /&gt;';
+	var aArray_5=[4,3,6,1,54,12,1];
+	aArray_5.reverse();
+	oBigbox13.innerHTML+='reverse：'+aArray_5+'&lt;br /&gt;';
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>创建元素</p>
+<div id="bigbox14">
+	<ul data-role="listview">
+		<li>Lorem ipsum dolor.</li>
+		<li>Lorem ipsum dolor.</li>
+		<li>Lorem ipsum dolor.</li>
+	</ul>
+</div>
+<button id="creatE">创建li</button>
+<script>
+	var oBigbox14=document.getElementById('bigbox14');
+	var oUl=oBigbox14.getElementsByTagName('ul')[0];
+	var oCreatE=document.getElementById('creatE');
+	oCreatE.onclick=function (argument) {
+		var oLi=document.createElement('li');
+		oUl.appendChild(oLi);
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var oBigbox14=document.getElementById('bigbox14');
+	var oUl=oBigbox14.getElementsByTagName('ul')[0];
+	var oCreatE=document.getElementById('creatE');
+	oCreatE.onclick=function (argument) {
+		var oLi=document.createElement('li');
+		oUl.appendChild(oLi);
+	}
+&lt;/script&gt;	
+</pre>
+<div id="bigbox15">
+	<input type="text">
+	<button id="createE">创建</button>
+</div>
+<script>
+	var oBigbox15=document.getElementById('bigbox15');
+	var oInput_1=oBigbox15.getElementsByTagName('input')[0];
+	var oCreateE=document.getElementById('createE');
+	oCreateE.onclick=function (argument) {
+		var oP_1=document.createElement('p');
+		oP_1.innerHTML="lorem";
+		if(oInput_1.value!=''){
+		oP_1.innerHTML=oInput_1.value;	
+		}
+		oBigbox15.appendChild(oP_1);
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var oBigbox15=document.getElementById('bigbox15');
+	var oInput_1=oBigbox15.getElementsByTagName('input')[0];
+	var oCreateE=document.getElementById('createE');
+	oCreateE.onclick=function (argument) {
+		var oP_1=document.createElement('p');
+		oP_1.innerHTML="lorem";
+		if(oInput_1.value!=''){
+		oP_1.innerHTML=oInput_1.value;	
+		}
+		oBigbox15.appendChild(oP_1);
+	}
+&lt;/script&gt;	
+</pre>
+<hr>
+<style>
+	#bigbox16,#bigbox17{border: 1px solid orange;padding: 20px;}
+	#bigbox16 div,#bigbox17 div{width: 100px;height: 100px;background: LightCyan;border: 1px solid gray;display: inline-block;margin: 10px;}
+	#bigbox16 div:last-of-type,#bigbox17 div:last-of-type{background: yellow;}
+</style>
+<div id="bigbox16">
+	<div>原初的DIV</div>
+</div>
+<script>
+	var oBigbox16=document.getElementById('bigbox16');
+	var odiv_16=oBigbox16.getElementsByTagName('div');
+	var x=0;
+var timerc=setInterval(function (argument) {
+		var oDiv_create16=document.createElement('div');
+		x=x+1;
+		oDiv_create16.innerHTML=x;
+		oBigbox16.insertBefore(oDiv_create16,odiv_16[0]);
+		if(x>5){
+			clearInterval(timerc)
+		}
+	},1000)
+</script>
+<pre>
+&lt;script&gt;
+	var oBigbox16=document.getElementById('bigbox16');
+	var odiv_16=oBigbox16.getElementsByTagName('div');
+	var x=0;
+var timerc=setInterval(function (argument) {
+		var oDiv_create16=document.createElement('div');
+		x=x+1;
+		oDiv_create16.innerHTML=x;
+		oBigbox16.insertBefore(oDiv_create16,odiv_16[0]);在指定元素的前面插入元素
+		if(x&gt;5){
+			clearInterval(timerc)
+		}
+	},1000)
+&lt;/script&gt;	
+</pre>
+<p>解决insertBefore的兼容问题</p>
+<div id="bigbox17" style="height:200px">
+	
+</div>
+<script>
+	var oBigbox17=document.getElementById('bigbox17');
+	var odiv_17=oBigbox17.getElementsByTagName('div');
+	var yz=0;
+var timerv=setInterval(function (argument) {
+		var oDiv_create17=document.createElement('div');
+		yz=yz+1;
+		oDiv_create17.innerHTML=yz;
+		if(oDiv_create17.length==0){
+			oBigbox17.appendChild(oDiv_create17);
+			oDiv_create17.innerHTML='success';
+		}else{
+			oBigbox17.insertBefore(oDiv_create17,odiv_17[0]);
+		}
+		if(yz>5){
+			clearInterval(timerv)
+		}
+	},1000)
+</script>
+<pre>
+	var oBigbox17=document.getElementById('bigbox17');
+	var odiv_17=oBigbox17.getElementsByTagName('div');
+	var yz=0;
+var timerv=setInterval(function (argument) {
+		var oDiv_create17=document.createElement('div');
+		yz=yz+1;
+		oDiv_create17.innerHTML=yz;
+		if(oDiv_create17.length==0){
+			oBigbox17.appendChild(oDiv_create17)
+		}else{
+			oBigbox17.insertBefore(oDiv_create17,odiv_17[0]);
+		}
+		if(yz>5){
+			clearInterval(timerv)
+		}
+	},1000)
+&lt;/script&gt;	
+</pre>
+<style>
+	#bigbox18{border: 1px solid orange;padding: 20px}
+	#bigbox18 div{width: 100px;height: 100px;border: 1px solid aqua;background: Ivory;display: inline-block;;margin: 10px}
+</style>
+<div id="bigbox18">
+	<div><a href="javascript:;">1删除</a></div>
+	<div><a href="javascript:;">2删除</a></div>
+	<div><a href="javascript:;">3删除</a></div>
+	<div><a href="javascript:;">4删除</a></div>
+	<div><a href="javascript:;">5删除</a></div>
+	<div><a href="javascript:;">6删除</a></div>
+	<div><a href="javascript:;">7删除</a></div>
+	<div><a href="javascript:;">8删除</a></div>
+	<div><a href="javascript:;">9删除</a></div>
+	<div><a href="javascript:;">10删除</a></div>
+</div>
+<script>
+	var oBigbox18=document.getElementById('bigbox18');
+	var oBigbox18_div=oBigbox18.getElementsByTagName('div');
+	function removeit (removeit) {
+		removeit.getElementsByTagName('a')[0].onclick=function(){
+			oBigbox18.removeChild(this.parentNode)
+		}	
+	}
+	for (var i = 0; i < oBigbox18_div.length; i++) {
+		removeit(oBigbox18_div[i]);
+	};
+</script>
+<pre>
+&lt;script&gt;
+	var oBigbox18=document.getElementById('bigbox18');
+	var oBigbox18_div=oBigbox18.getElementsByTagName('div');
+	function removeit (removeit) {
+		removeit.getElementsByTagName('a')[0].onclick=function(){
+			oBigbox18.removeChild(this.parentNode)
+		}	
+	}
+	for (var i = 0; i &lt; oBigbox18_div.length; i++) {
+		removeit(oBigbox18_div[i]);
+	};
+&lt;/script&gt;
+</pre>
+<hr>
+<ul id="mar">文档碎片</ul>
+<p>document.creatDocumentFragment</p>
+<script>
+	var oMar=document.getElementById('mar');
+	var oNdiv=document.createDocumentFragment();
+	var oNli=document.createElement('li');
+	oNli.innerHTML="理论上提高性能";
+	oNdiv.appendChild(oNli);
+	oMar.appendChild(oNdiv)
+</script>
+<pre>
+&lt;script&gt;
+	var oMar=document.getElementById('mar');
+	var oNdiv=document.createDocumentFragment();
+	var oNli=document.createElement('li');
+	oNli.innerHTML="理论上提高性能";
+	oNdiv.appendChild(oNli);
+	oMar.appendChild(oNdiv)
+&lt;/script&gt;	
+</pre>
+<style>
+	#ctime{border: 1px solid red;padding: 10px;display: inline-block;}
+</style>
+<p id="ctime">lore</p>
+<script>
+var oCtime=document.getElementById('ctime');
+	setInterval(function (argument) {
+		oCtime.innerHTML=new Date().getTime();
+	},100);
+var optime=new Date().getTime();
+var ocreate_Btn=document.createElement('button');
+ocreate_Btn.innerHTML='click me !';
+body.insertBefore(ocreate_Btn,oCtime);
+ocreate_Btn.onclick=function (argument) {
+	alert(parseInt((new Date().getTime()-optime)/1000)+'秒')
+}
+</script>
+<pre>
+&lt;script&gt;
+var oCtime=document.getElementById('ctime');
+	setInterval(function (argument) {
+		oCtime.innerHTML=new Date().getTime();
+	},100);
+var optime=new Date().getTime();
+var ocreate_Btn=document.createElement('button');
+ocreate_Btn.innerHTML='click me !';
+body.insertBefore(ocreate_Btn,oCtime);
+ocreate_Btn.onclick=function (argument) {
+	alert(parseInt((new Date().getTime()-optime)/1000)+'秒')
+}
+&lt;/script&gt;	
+</pre>
+<hr>
+<div id="bigbox19"></div>
+<style>
+	#bigbox19{
+		border: 1px solid lime;padding: 10px
+	}
+	#bigbox19>ul{
+		padding: 10px;
+		border: 1px solid aqua;
+	}
+	#bigbox19>ul li{
+		padding: 3px;
+		list-style: none
+	}
+	#bigbox19>ul li:before{
+		content: url(img/q.jpg)
+	}
+	#bigbox19>ul button{
+		border: 1px solid orange;
+		background: Ivory;
+		float: right;
+	}
+</style>
+<script>
+	var oBigbox19=document.getElementById('bigbox19');	
+		var oC_ul=document.createElement('ul');
+		var oC_li=document.createElement('li');
+		var oC_a=document.createElement('a');
+		var oC_btn=document.createElement('button');
+		oBigbox19.appendChild(oC_ul);
+		oC_ul.appendChild(oC_li);
+		oC_li.appendChild(oC_a);
+		oC_li.appendChild(oC_btn);
+		oC_btn.innerHTML='remove';
+		oC_a.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi velit reiciendis asperiores.';
+		oC_btn.onclick=function () {
+			oC_ul.removeChild(this.parentNode)
+		}
+</script>
+<pre>
+&lt;style&gt;
+	#bigbox19{
+		border: 1px solid lime;padding: 10px
+	}
+	#bigbox19&gt;ul{
+		padding: 10px;
+		border: 1px solid aqua;
+	}
+	#bigbox19&gt;ul li{
+		padding: 3px;
+		list-style: none
+	}
+	#bigbox19&gt;ul li:before{
+		content: url(img/q.jpg)
+	}
+&lt;/style&gt;
+&lt;script&gt;
+	var oBigbox19=document.getElementById('bigbox19');
+	var oC_ul=document.createElement('ul');
+	var oC_li=document.createElement('li');
+	var oC_a=document.createElement('a');
+	oBigbox19.appendChild(oC_ul);
+	oC_ul.appendChild(oC_li);
+	oC_li.appendChild(oC_a);
+	oC_a.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi velit reiciendis asperiores.';
+	oC_btn.onclick=function () {
+			oC_ul.removeChild(this.parentNode)
+		}
+&lt;/script&gt;	
+</pre>
+<div id="bigbox20">
+</div>
+<style>
+	#bigbox20{
+		border: 1px solid lime;padding: 10px
+	}
+	#bigbox20>ul{
+		padding: 10px;
+		border: 1px solid aqua;
+	}
+	#bigbox20>ul li{
+		padding: 3px;
+		list-style: none
+	}
+	#bigbox20>ul li:before{
+		content: url(img/q.jpg)
+	}
+	#bigbox20>ul button{
+		border: 1px solid orange;
+		background: Ivory;
+		float: right;
+	}
+</style>
+<script>
+	var oBigbox20=document.getElementById('bigbox20');	
+		var oC_ul=document.createElement('ul');
+		var oC_li=document.createElement('li');
+		var oC_a=document.createElement('a');
+		var oC_btn=document.createElement('button');
+		oBigbox20.insertBefore(oC_ul,oBigbox20.firstChild);
+		oBigbox20.getElementsByTagName('ul')[0].appendChild(oC_li);
+		oBigbox20.getElementsByTagName('li')[0].appendChild(oC_a);
+		oBigbox20.getElementsByTagName('li')[0].appendChild(oC_btn);
+		oC_btn.innerHTML='remove';
+		oC_a.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi velit reiciendis asperiores.';
+		oBigbox20.getElementsByTagName('button')[0].onclick=function () {
+			oBigbox20.getElementsByTagName('ul')[1].removeChild(this.parentNode) //这里的UL是第二个
+		}
+		var oC_ul=document.createElement('ul');
+		oBigbox20.insertBefore(oC_ul,oBigbox20.firstChild);
+		var oC_li=document.createElement('li');
+		oBigbox20.getElementsByTagName('ul')[0].appendChild(oC_li);
+		var oC_a=document.createElement('a');
+		oBigbox20.getElementsByTagName('li')[0].appendChild(oC_a);
+		var oC_btn=document.createElement('button');
+		oBigbox20.getElementsByTagName('li')[0].appendChild(oC_btn);
+		oC_btn.innerHTML='remove';
+		oC_a.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi velit reiciendis asperiores.';
+		oBigbox20.getElementsByTagName('button')[0].onclick=function () {
+			oBigbox20.getElementsByTagName('ul')[0].removeChild(this.parentNode)
+		}
+	// for (var i = 4; i >= 0; i--) {
+	// 	var oC_ul=document.createElement('ul');
+	// 	oBigbox20.insertBefore(oC_ul,oBigbox20.firstChild);
+	// 	var oC_li=document.createElement('li');
+	// 	oBigbox20.getElementsByTagName('ul')[0].appendChild(oC_li);
+	// 	var oC_a=document.createElement('a');
+	// 	oBigbox20.getElementsByTagName('li')[0].appendChild(oC_a);
+	// 	var oC_btn=document.createElement('button');
+	// 	oBigbox20.getElementsByTagName('li')[0].appendChild(oC_btn);
+	// 	oC_btn.innerHTML='remove';
+	// 	oC_a.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi velit reiciendis asperiores.';
+	// 	oBigbox20.getElementsByTagName('button')[0].onclick=function () {
+	// 		oBigbox20.getElementsByTagName('ul')[i].removeChild(this.parentNode);
+	// 	}
+	// };
+</script>
+<pre>
+&lt;script&gt;
+	var oBigbox20=document.getElementById('bigbox20');	
+		var oC_ul=document.createElement('ul');
+		var oC_li=document.createElement('li');
+		var oC_a=document.createElement('a');
+		var oC_btn=document.createElement('button');
+		oBigbox20.insertBefore(oC_ul,oBigbox20.firstChild);
+		oBigbox20.getElementsByTagName('ul')[0].appendChild(oC_li);
+		oBigbox20.getElementsByTagName('li')[0].appendChild(oC_a);
+		oBigbox20.getElementsByTagName('li')[0].appendChild(oC_btn);
+		oC_btn.innerHTML='remove';
+		oC_a.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi velit reiciendis asperiores.';
+		oBigbox20.getElementsByTagName('button')[0].onclick=function () {
+			oBigbox20.getElementsByTagName('ul')[1].removeChild(this.parentNode) //这里的UL是第二个
+		}
+		var oC_ul=document.createElement('ul');
+		oBigbox20.insertBefore(oC_ul,oBigbox20.firstChild);
+		var oC_li=document.createElement('li');
+		oBigbox20.getElementsByTagName('ul')[0].appendChild(oC_li);
+		var oC_a=document.createElement('a');
+		oBigbox20.getElementsByTagName('li')[0].appendChild(oC_a);
+		var oC_btn=document.createElement('button');
+		oBigbox20.getElementsByTagName('li')[0].appendChild(oC_btn);
+		oC_btn.innerHTML='remove';
+		oC_a.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi velit reiciendis asperiores.';
+		oBigbox20.getElementsByTagName('button')[0].onclick=function () {
+			oBigbox20.getElementsByTagName('ul')[0].removeChild(this.parentNode)
+		}
+&lt;/script&gt;	
+</pre>
+<p>Event事件对象</p>
+<div id="even"></div>
+<style>
+	#even{width: 400px;height: 100px;border: 1px solid gray}
+</style>
+<script>
+	var even=document.getElementById('even');
+	var oinputoo=document.createElement('input');
+	even.appendChild(oinputoo);
+	even.onmouseover=function function_name (argument) {
+		var oEvent=event||ev;
+		oinputoo.value='clientX'+oEvent.clientX+',clientY'+oEvent.clientY;
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var even=document.getElementById('even');
+	var oinputoo=document.createElement('input');
+	even.appendChild(oinputoo);
+	even.onmouseover=function function_name (argument) {
+		var oEvent=event||ev;
+		oinputoo.value='clientX'+oEvent.clientX+',clientY'+oEvent.clientY;
+	}
+&lt;/script&gt;	
+</pre>
+<div id="div20">
+</div>
+<script>
+	var oDiv20=document.getElementById('div20');
+	var odiv1=document.createElement('div');
+	odiv1.style.margin='20px';
+	odiv1.style.width='400px';
+	odiv1.style.height='400px';
+	odiv1.style.border="1px solid GhostWhite";
+	odiv1.style.background="skyblue";
+	oDiv20.appendChild(odiv1);
+	odiv1.onclick=function (argument) {
+		alert(this.style.background)
+	}
+	var odiv2=document.createElement('div');
+	odiv2.style.width='300px';
+	odiv2.style.height='300px';
+	odiv2.style.border="1px solid pink";
+	odiv2.style.background="LightCyan";
+	odiv1.appendChild(odiv2);
+	odiv2.onclick=function (argument) {
+		alert(this.style.background)
+	}
+	var odiv3=document.createElement('div');
+	odiv3.style.width='200px';
+	odiv3.style.height='200px';
+	odiv3.style.border="1px solid orange";
+	odiv3.style.background="silver";
+	odiv2.appendChild(odiv3);
+	odiv3.onclick=function (argument) {
+		alert(this.style.background)
+	}
+	var oP_2=document.createElement('p');
+	oP_2.innerHTML="事件冒泡,点击";
+	odiv3.appendChild(oP_2);
+</script>
+<pre>
+&lt;script&gt;
+	var oDiv20=document.getElementById('div20');
+	var odiv1=document.createElement('div');
+	odiv1.style.margin='20px';
+	odiv1.style.width='400px';
+	odiv1.style.height='400px';
+	odiv1.style.border="1px solid GhostWhite";
+	odiv1.style.background="skyblue";
+	oDiv20.appendChild(odiv1);
+	odiv1.onclick=function (argument) {
+		alert(this.style.background)
+	}
+	var odiv2=document.createElement('div');
+	odiv2.style.width='300px';
+	odiv2.style.height='300px';
+	odiv2.style.border="1px solid pink";
+	odiv2.style.background="LightCyan";
+	odiv1.appendChild(odiv2);
+	odiv2.onclick=function (argument) {
+		alert(this.style.background)
+	}
+	var odiv3=document.createElement('div');
+	odiv3.style.width='200px';
+	odiv3.style.height='200px';
+	odiv3.style.border="1px solid orange";
+	odiv3.style.background="silver";
+	odiv2.appendChild(odiv3);
+	odiv3.onclick=function (argument) {
+		alert(this.style.background)
+	}
+	var oP_2=document.createElement('p');
+	oP_2.innerHTML="事件冒泡,点击";
+	odiv3.appendChild(oP_2);
+&lt;/script&gt;	
+</pre>
+<div id="div21">
+</div>
+<script>
+	var oDiv21=document.getElementById('div21');
+	var odiv1=document.createElement('div');
+	odiv1.style.margin='20px';
+	odiv1.style.width='400px';
+	odiv1.style.height='400px';
+	odiv1.style.border="1px solid GhostWhite";
+	odiv1.style.background="skyblue";
+	oDiv21.appendChild(odiv1);
+	odiv1.onclick=function (ev) {
+		var oEvent=event||ev;
+		oEvent.cancelBubble=true;
+		alert(this.style.background);
+	}
+	var odiv2=document.createElement('div');
+	odiv2.style.width='300px';
+	odiv2.style.height='300px';
+	odiv2.style.border="1px solid pink";
+	odiv2.style.background="LightCyan";
+	odiv1.appendChild(odiv2);
+	odiv2.onclick=function (ev) {
+		var oEvent=event||ev;
+		oEvent.cancelBubble=true;
+		alert(this.style.background)
+	}
+	var odiv3=document.createElement('div');
+	odiv3.style.width='200px';
+	odiv3.style.height='200px';
+	odiv3.style.border="1px solid orange";
+	odiv3.style.background="silver";
+	odiv2.appendChild(odiv3);
+	odiv3.onclick=function (ev) {
+		var oEvent=event||ev;
+		oEvent.cancelBubble=true;
+		alert(this.style.background)
+	}
+	var oP_2=document.createElement('p');
+	oP_2.innerHTML="取消冒泡事件";
+	odiv3.appendChild(oP_2);
+</script>
+<pre>
+&lt;script&gt;
+	var oDiv21=document.getElementById('div21');
+	var odiv1=document.createElement('div');
+	odiv1.style.margin='20px';
+	odiv1.style.width='400px';
+	odiv1.style.height='400px';
+	odiv1.style.border="1px solid GhostWhite";
+	odiv1.style.background="skyblue";
+	oDiv21.appendChild(odiv1);
+	odiv1.onclick=function (ev) {
+		var oEvent=event||ev;
+		oEvent.cancelBubble=true;
+		alert(this.style.background);
+	}
+	var odiv2=document.createElement('div');
+	odiv2.style.width='300px';
+	odiv2.style.height='300px';
+	odiv2.style.border="1px solid pink";
+	odiv2.style.background="LightCyan";
+	odiv1.appendChild(odiv2);
+	odiv2.onclick=function (argument) {
+		var oEvent=event||ev;
+		oEvent.cancelBubble=true;
+		alert(this.style.background)
+	}
+	var odiv3=document.createElement('div');
+	odiv3.style.width='200px';
+	odiv3.style.height='200px';
+	odiv3.style.border="1px solid orange";
+	odiv3.style.background="silver";
+	odiv2.appendChild(odiv3);
+	odiv3.onclick=function (argument) {
+		var oEvent=event||ev;
+		oEvent.cancelBubble=true;
+		alert(this.style.background)
+	}
+	var oP_2=document.createElement('p');
+	oP_2.innerHTML="取消冒泡事件";
+	odiv3.appendChild(oP_2);
+&lt;/script&gt;	
+</pre>
+<div id="div23" style="width: 100px;height: 100px;	background:aqua">
+<div id="div24" style="width: 40px;height: 40px;background:lime"></div>
+</div>
+<p>调整完兼容性的事件冒泡</p>
+<script>
+var div23=document.getElementById('div23');
+var div24=document.getElementById('div24');
+	div24.onclick=function (ev) {
+		alert(1);
+		cancelBubble();
+	}
+	div23.onclick=function (ev) {
+		alert(2);
+		cancelBubble();
+	}
+	function getEvent(){
+    if(window.event)    {return window.event;}
+    func=getEvent.caller;
+    while(func!=null){
+        var arg0=func.arguments[0];
+        if(arg0){
+            if((arg0.constructor==Event || arg0.constructor ==MouseEvent
+                || arg0.constructor==KeyboardEvent)
+                ||(typeof(arg0)=="object" && arg0.preventDefault
+                && arg0.stopPropagation)){
+                return arg0;
+            }
+        }
+        func=func.caller;
+    }
+    return null;
+}
+//阻止冒泡
+function cancelBubble()
+{
+    var e=getEvent();
+    if(window.event){
+        //e.returnValue=false;//阻止自身行为
+        e.cancelBubble=true;//阻止冒泡
+    }else if(e.preventDefault){
+        //e.preventDefault();//阻止自身行为
+        e.stopPropagation();//阻止冒泡
+    }
+}
+</script>
+<pre>
+&lt;div id="div23" style="width: 100px;height: 100px;	background:aqua"&gt;
+&lt;div id="div24" style="width: 40px;height: 40px;background:lime"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+var div23=document.getElementById('div23');
+var div24=document.getElementById('div24');
+	div24.onclick=function (ev) {
+		alert(1);
+		cancelBubble();
+	}
+	div23.onclick=function (ev) {
+		alert(2);
+		cancelBubble();
+	}
+	function getEvent(){
+    if(window.event)    {return window.event;}
+    func=getEvent.caller;
+    while(func!=null){
+        var arg0=func.arguments[0];
+        if(arg0){
+            if((arg0.constructor==Event || arg0.constructor ==MouseEvent
+                || arg0.constructor==KeyboardEvent)
+                ||(typeof(arg0)=="object" && arg0.preventDefault
+                && arg0.stopPropagation)){
+                return arg0;
+            }
+        }
+        func=func.caller;
+    }
+    return null;
+}
+//阻止冒泡
+function cancelBubble()
+{
+    var e=getEvent();
+    if(window.event){
+        //e.returnValue=false;//阻止自身行为
+        e.cancelBubble=true;//阻止冒泡
+    }else if(e.preventDefault){
+        //e.preventDefault();//阻止自身行为
+        e.stopPropagation();//阻止冒泡
+    }
+}
+&lt;/script&gt;	
+</pre>
+<div id="div22" style="height:250px">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis exercitationem impedit, quia ipsa dolore delectus eligendi iste architecto omnis, earum maiores aliquid harum voluptate voluptatum ut cum dolorum fuga excepturi.
+</div>
+<style>
+</style>
+<script>
+	var oDiv22=document.getElementById('div22');
+	var oDiv_ev1=document.createElement('div');
+	oDiv_ev1.style.width='200px';
+	oDiv_ev1.style.height='200px';
+	oDiv_ev1.style.border='1px solid aqua';
+	oDiv_ev1.style.background='red';
+	oDiv_ev1.style.margin='20px';
+	oDiv_ev1.style.position='absolute';
+	oDiv_ev1.innerHTML='点击这个';
+	oDiv22.appendChild(oDiv_ev1);
+	oDiv_ev1.onclick=function () {
+		document.onmousemove=function (ev) {
+			var oEvent=event||ev;
+			var scrollTop1=document.documentElement.scrollTop||document.body.scrollTop;
+			oDiv_ev1.style.left=oEvent.clientX+'px';
+			oDiv_ev1.style.top=oEvent.clientY+scrollTop1+'px';
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var oDiv22=document.getElementById('div22');
+	var oDiv_ev1=document.createElement('div');
+	oDiv_ev1.style.width='200px';
+	oDiv_ev1.style.height='200px';
+	oDiv_ev1.style.border='1px solid aqua';
+	oDiv_ev1.style.background='red';
+	oDiv_ev1.style.margin='20px';
+	oDiv_ev1.style.position='absolute';
+	oDiv22.appendChild(oDiv_ev1);
+	oDiv_ev1.onclick=function () {
+		document.onmousemove=function (ev) {
+			var oEvent=event||ev;
+			var scrollTop1=document.documentElement.scrollTop||document.body.scrollTop;
+			oDiv_ev1.style.left=oEvent.clientX+'px';
+			oDiv_ev1.style.top=oEvent.clientY+scrollTop1+'px';
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<style>	
+	#div25 div{width: 10px;	height: 10px;	position: absolute;background: LightCyan;border: aqua}
+</style>
+<div id="div25">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+<button id="flow">Click me!</button>
+<script>	
+	var aLi=document.getElementById('div25').getElementsByTagName('div');
+	var oFlow=document.getElementById('flow');
+	flow.onclick=function (argument) {
+	document.onmousemove=function  (ev) {
+		var oEvent=ev||event;
+	for (var i = aLi.length-1; i > 0; i--) {
+		aLi[i].style.left=aLi[i-1].style.left;
+		aLi[i].style.top=aLi[i-1].style.top;
+	};
+	var scrollTop1=document.documentElement.scrollTop||document.body.scrollTop;
+	var scrollLeft1=document.documentElement.scrollLeft||document.body.scrollLeft;
+aLi[0].style.left=oEvent.clientX+scrollLeft1+'px';
+aLi[0].style.top=oEvent.clientY+scrollTop1+'px';
+	}
+	}
+</script>
+<pre>	
+&lt;script&gt;	
+	var aLi=document.getElementById('div25').getElementsByTagName('div');
+	var oFlow=document.getElementById('flow');
+	flow.onclick=function (argument) {
+	document.onmousemove=function  (ev) {
+		var oEvent=ev||event;
+	for (var i = aLi.length-1; i &gt; 0; i--) {
+		aLi[i].style.left=aLi[i-1].style.left;
+		aLi[i].style.top=aLi[i-1].style.top;
+	};
+	var scrollTop1=document.documentElement.scrollTop||document.body.scrollTop;
+	var scrollLeft1=document.documentElement.scrollLeft||document.body.scrollLeft;
+aLi[0].style.left=oEvent.clientX+scrollLeft1+'px';
+aLi[0].style.top=oEvent.clientY+scrollTop1+'px';
+	}
+	}
+&lt;/script&gt;
+</pre>
+<hr>
+<h4>keyCode</h4>
+<div id="div26">
+	
+</div>
+<style>
+	#div26{width: 100px;height: 100px;border:1px solid blue;background: LightCyan;margin: 30px auto}
+</style>
+<script>
+	document.onkeydown=function (ev) {
+		var oEvent=ev||event;
+		switch(oEvent.keyCode){
+			case 32:alert('你刚刚按下了空格键');break;
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	document.onkeydown=function (ev) {
+		var oEvent=ev||event;
+		switch(oEvent.keyCode){
+			case 32:alert('你刚刚按下了空格键');break;
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<div id="div27">
+	
+</div>
+<style>
+	#div27{width: 100px;height: 100px;border:1px solid blue;background: LightCyan;margin: 0px auto;position: absolute;}
+</style>
+<script>
+var oDiv27=document.getElementById('div27');
+	document.onkeydown=function (ev) {
+		var oEvent=ev||event;
+		switch(oEvent.keyCode){
+			case 68:oDiv27.style.left=oDiv27.offsetLeft+10+'px';break;
+			case 65:oDiv27.style.left=oDiv27.offsetLeft-10+'px';break;
+			case 83:oDiv27.style.top=oDiv27.offsetTop+10+'px';break;
+			case 87:oDiv27.style.top=oDiv27.offsetTop-10+'px';break;
+		}
+	}
+</script>
+<pre style="margin-top:120px">
+&lt;style&gt;
+	#div27{width: 100px;height: 100px;border:1px solid blue;background: LightCyan;margin: 0px auto;position: absolute;}//offset与margin有一定关系
+&lt;/style&gt;
+&lt;script&gt;
+var oDiv27=document.getElementById('div27');
+	document.onkeydown=function (ev) {
+		var oEvent=ev||event;
+		switch(oEvent.keyCode){
+			case 68:oDiv27.style.left=oDiv27.offsetLeft+10+'px';break;
+			case 65:oDiv27.style.left=oDiv27.offsetLeft-10+'px';break;
+			case 83:oDiv27.style.top=oDiv27.offsetTop+10+'px';break;
+			case 87:oDiv27.style.top=oDiv27.offsetTop-10+'px';break;
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<textarea name="one" id="txt1" cols="30" rows="10" placeholder="按住ctrl加Enter键可提交"></textarea>
+<input type="text" id="txt2">
+<button id="txt3">提交</button>
+<script>
+	var otxt1=document.getElementById('txt1');
+	var oTextarea_text=document.getElementById('txt2');
+	var otxt3=document.getElementById('txt3');
+	txt3.onclick=function () {
+		txt1.value+=txt2.value+'\n';
+		txt2.value='';
+	}
+	txt2.onkeydown=function (ev) {
+		var oEvent=ev||event;
+		if(oEvent.ctrlKey&&oEvent.keyCode==13){//alt和shift同理
+			txt1.value+=txt2.value+'\n';
+			txt2.value='';
+		}
+	}
+</script>
+<pre style="margin-bottom:40px">
+&lt;textarea name="one" id="txt1" cols="30" rows="10" placeholder="按住ctrl加Enter键可提交"&gt;&lt;/textarea&gt;
+&lt;input type="text" id="txt2"&gt;
+&lt;button id="txt3"&gt;提交&lt;/button&gt;
+&lt;script&gt;
+	var otxt1=document.getElementById('txt1');
+	var oTextarea_text=document.getElementById('txt2');
+	var otxt3=document.getElementById('txt3');
+	txt3.onclick=function () {
+		txt1.value+=txt2.value+'\n';
+		txt2.value='';
+	}
+	txt2.onkeydown=function (ev) {
+		var oEvent=ev||event;
+		if(oEvent.ctrlKey&&oEvent.keyCode==13){//alt和shift同理
+			txt1.value+=txt2.value+'\n';
+			txt2.value='';
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<style>
+	#tiezi{border: 1px solid Gainsboro;min-height: 500px}
+	#tiezi>p{padding: 15px;border-bottom: 1px solid Gainsboro;display: block;line-height: 28px;margin: 0px;}
+	#tiezi div img{width: 100px}
+	#tiezi p span,#touxian{border: 1px solid silver;padding: 4px 6px;margin: 0px 5px;cursor:pointer;display: inline-block;font-family: Microsoft YaHei;border-radius: 2px;line-height: 22px}
+	#tiezi div:nth-of-type(1){padding: 20px;background: Ivory;width: 150px;float:left;}
+	#tiezi div>img{outline: 1px solid Gainsboro;outline-offset:5px;margin-bottom: 30px}
+	#tiezi div>img~a{margin-top: 30px;font-size: 12px;display:inline-block;padding-bottom:10px;}
+	#touxian{background:url(img/smail.jpg);width: 110px;margin: -5px;display: block}
+	#tiezispan{}
+	
+</style>
+<div id="tiezi">
+<p>问：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quibusdam nemo sunt. <span>只看楼主</span><span>收藏</span><span>回复</span></p>
+	<div>
+		<img src="img/good.jpg" alt="">
+		<a href="javascript:;">月主会元帅欧吉克</a>
+		<span id="touxian">纵横万场</span>
+	</div>
+	<span id="tiezispan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, unde assumenda. Incidunt repellat libero natus nulla, voluptatum possimus temporibus vero voluptates non, veritatis velit autem excepturi atque magni dicta voluptatem.</span>
+</div>
+<textarea name="" id="textarea_2" cols="50" rows="10" style="margin-left:20%;border:1px solid Gainsboro;margin-top:3%"></textarea>
+<br>
+<button style="float:right;margin-right:30%" id="finally">submit</button>
+
+<script>
+	var oFinally=document.getElementById('finally');
+	oFinally.onclick=function(){
+	var oTextarea_2=document.getElementById('textarea_2');
+	var oTie_div=document.createElement('div');
+	var oTie_img=document.createElement('img');
+	var oTie_a=document.createElement('a');
+	var oTie_span=document.createElement('span');
+	var oTie_p=document.createElement('p');
+	oTie_div.setAttribute("id","tiezi")
+		body.insertBefore(oTie_div,oTextarea_2);
+		var oTie_div_2=document.createElement('div');
+		oTie_div.appendChild(oTie_div_2);
+		oTie_div_2.appendChild(oTie_img);
+		oTie_img.src='img/good.jpg';
+		oTie_div_2.appendChild(oTie_a);
+		oTie_a.innerHTML='月主会元帅欧吉克';
+		oTie_div_2.appendChild(oTie_span);
+		oTie_span.innerHTML='纵横万场';
+		var oTie_span2=document.createElement('span');
+		oTie_div.appendChild(oTie_span2);
+		oTie_span2.innerHTML=oTextarea_2.value;
+	}
+</script>
+<pre style="clear:both">
+&lt;div id="tiezi"&gt;
+&lt;p&gt;问：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quibusdam nemo sunt. &lt;span&gt;只看楼主&lt;/span&gt;&lt;span&gt;收藏&lt;/span&gt;&lt;span&gt;回复&lt;/span&gt;&lt;/p&gt;
+	&lt;div&gt;
+		&lt;img src="img/good.jpg" alt=""&gt;
+		&lt;a href="javascript:;"&gt;月主会元帅欧吉克&lt;/a&gt;
+		&lt;span id="touxian"&gt;纵横万场&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;span id="tiezispan"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, unde assumenda. Incidunt repellat libero natus nulla, voluptatum possimus temporibus vero voluptates non, veritatis velit autem excepturi atque magni dicta voluptatem.&lt;/span&gt;
+&lt;/div&gt;
+&lt;textarea name="" id="textarea_2" cols="50" rows="10" style="margin-left:20%;border:1px solid Gainsboro;margin-top:3%"&gt;&lt;/textarea&gt;
+&lt;br&gt;
+&lt;button style="float:right;margin-right:30%" id="finally"&gt;submit&lt;/button&gt;
+&lt;script&gt;
+	var oFinally=document.getElementById('finally');
+	oFinally.onclick=function(){
+	var oTextarea_2=document.getElementById('textarea_2');
+	var oTie_div=document.createElement('div');
+	var oTie_img=document.createElement('img');
+	var oTie_a=document.createElement('a');
+	var oTie_span=document.createElement('span');
+	var oTie_p=document.createElement('p');
+	oTie_div.setAttribute("id","tiezi")
+		body.insertBefore(oTie_div,oTextarea_2);
+		var oTie_div_2=document.createElement('div');
+		oTie_div.appendChild(oTie_div_2);
+		oTie_div_2.appendChild(oTie_img);
+		oTie_img.src='img/good.jpg';
+		oTie_div_2.appendChild(oTie_a);
+		oTie_a.innerHTML='月主会元帅欧吉克';
+		oTie_div_2.appendChild(oTie_span);
+		oTie_span.innerHTML='纵横万场';
+		var oTie_span2=document.createElement('span');
+		oTie_div.appendChild(oTie_span2);
+		oTie_span2.innerHTML=oTextarea_2.value;
+	}
+&lt;/script&gt;	
+</pre>
+<button id="jvjue">阻止右键能点出菜单的默认事件，click me !</button>可以用于表单验证，如果用户提交的不正确等，而oncontextmenu可以设置右键显示想要的东西，比如定义个下拉列表
+<script>
+	var oJvjue=document.getElementById('jvjue');
+	oJvjue.onclick=function (argument) {
+		document.oncontextmenu=function(){
+			return false;
+		}
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var oJvjue=document.getElementById('jvjue');
+	oJvjue.onclick=function (argument) {
+		document.oncontextmenu=function(){
+			return false;
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<hr>
+<input type="text" id="onlynum" placeholder="文本框通过JS只能输入数字">
+<script>
+	var oOnlynum=document.getElementById('onlynum');
+	oOnlynum.onkeydown=function (ev) {
+		var oEvent=ev||event;
+		if(oEvent.keyCode!=8&&(oEvent.keyCode<47||oEvent.keyCode>57)){
+			return false;
+		}
+	}
+</script>
+<pre>
+&lt;input type="text" id="onlynum" placeholder="文本框通过JS只能输入数字"&gt;
+&lt;script&gt;
+	var oOnlynum=document.getElementById('onlynum');
+	oOnlynum.onkeydown=function (ev) {
+		var oEvent=ev||event;
+		if(oEvent.keyCode!=8&&(oEvent.keyCode<47||oEvent.keyCode>57)){
+			return false;
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>拖拽</p>
+<img src="img/drag.png" alt="">
+<hr>
+<p>工厂模式</p>
+<div id="unlessdiv"></div>
+<script>
+	var oUnlessdiv=document.getElementById('unlessdiv');
+	function creatediv (w,h,outline,color) {
+		var oFac_div=document.createElement('div');
+		oFac_div.style.width=w;
+		oFac_div.style.height=h;
+		oFac_div.style.outline=outline;
+		oFac_div.style.background=color;
+		oFac_div.style.margin='15px';
+		body.insertBefore(oFac_div,oUnlessdiv);
+	}
+	creatediv('100px','100px','5px solid red','aqua');
+	creatediv('50px','50px','2px solid red','yellow');
+</script>
+<pre>
+&lt;script&gt;
+	var oUnlessdiv=document.getElementById('unlessdiv');
+	function creatediv (w,h,outline,color) {
+		var oFac_div=document.createElement('div');
+		oFac_div.style.width=w;
+		oFac_div.style.height=h;
+		oFac_div.style.outline=outline;
+		oFac_div.style.background=color;
+		oFac_div.style.margin='15px';
+		body.insertBefore(oFac_div,oUnlessdiv);
+	}
+	creatediv('100px','100px','5px solid red','aqua');
+	creatediv('50px','50px','2px solid red','yellow');
+&lt;/script&gt;	
+</pre>
+<button id="fac">factory</button>
+<script>
+var oFacbtn=document.getElementById('fac');
+	function createPerson(name,sex){
+		var obj=new Object();
+		obj.name=name;
+		obj.sex=sex;
+		obj.showname=function (argument) {
+			alert(this.name)
+		}
+		obj.showsex=function (argument) {
+			alert(this.sex)
+		}
+		return obj;
+	}
+	var p1=createPerson('赵帅飞','男');
+	fac.onclick=function (argument) {
+		p1.showname();
+	}
+</script>
+<pre>
+&lt;button id="fac"&gt;factory&lt;/button&gt;
+&lt;script&gt;
+var oFacbtn=document.getElementById('fac');
+	function createPerson(name,sex){
+		var obj=new Object();
+		obj.name=name;
+		obj.sex=sex;
+		obj.showname=function (argument) {
+			alert(this.name)
+		}
+		obj.showsex=function (argument) {
+			alert(this.sex)
+		}
+		return obj;
+	}
+	var p1=createPerson('赵帅飞','男');
+	fac.onclick=function (argument) {
+		p1.showname();
+	}
+&lt;/script&gt;	
+</pre>
+<button id="fac_2">factory_2</button>
+<script>
+var oFacbtn_2=document.getElementById('fac_2');
+	function createPerson(name,sex){
+		this.name=name;
+		this.sex=sex;
+		this.showname=function (argument) {
+			alert(this.name)
+		}
+		this.showsex=function (argument) {
+			alert(this.sex)
+		}
+	}
+	var p1=new createPerson('赵帅飞','男');
+	oFacbtn_2.onclick=function (argument) {
+		p1.showname();
+	}
+</script>
+<pre>
+&lt;button id="fac_2"&gt;factory&lt;/button&gt;
+&lt;script&gt;
+var oFacbtn_2=document.getElementById('fac_2');
+	function createPerson(name,sex){
+		this.name=name;
+		this.sex=sex;
+		this.showname=function (argument) {
+			alert(this.name)
+		}
+		this.showsex=function (argument) {
+			alert(this.sex)
+		}
+	}
+	var p1=new createPerson('赵帅飞','男');
+	oFacbtn_2.onclick=function (argument) {
+		p1.showname();
+	}
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>原型对象与删除原型方法</p>
+<button id="btn_pro">新加的方法prototype</button>
+<script>
+	var oBtn_pro=document.getElementById('btn_pro');
+	function createPerson1(name,sex){
+		this.name=name;
+		this.sex=sex;
+		this.showname=function (argument) {
+			alert(this.name)
+		}
+		this.showsex=function (argument) {
+			alert(this.sex)
+		}
+	}
+	var zsd=new createPerson1('赵帅飞','男');
+	createPerson1.prototype.method_name = function(first_argument) {
+		alert(this.name+this.sex);
+	};
+	// delete createPerson1.method_name();删除这个属性
+	oBtn_pro.onclick=function (argument) {	
+		zsd.method_name();
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var oBtn_pro=document.getElementById('btn_pro');
+	function createPerson1(name,sex){
+		this.name=name;
+		this.sex=sex;
+		this.showname=function (argument) {
+			alert(this.name)
+		}
+		this.showsex=function (argument) {
+			alert(this.sex)
+		}
+	}
+	var zsd=new createPerson1('赵帅飞','男');
+	createPerson1.prototype.method_name = function(first_argument) {
+		alert(this.name+this.sex);
+	};
+	// delete createPerson1.method_name();删除这个属性
+	oBtn_pro.onclick=function (argument) {	
+		zsd.method_name();
+	}
+&lt;/script&gt;	
+</pre>
+<div id="huabu">
+	
+</div>
+<style>
+	#huabu{height: 400px;border: 3px solid pink;margin:30px;overflow: hidden;box-sizing:content-box;box-sizing:-webkit-content-box;}
+	#huabudiv{
+		-webkit-animation-name:'nw';
+		-webkit-animation-duration:2s;
+		-webkit-animation-iteration-count:2;
+	}
+	@-webkit-keyframes'nw'{
+		0%{
+			-webkit-transform:rotate(200deg);
+			background: yellow;
+		}
+		50%{
+			-webkit-transform:rotate(0deg);
+		}
+		100%{
+			-webkit-transform:rotate(0deg);
+			-webkit-transform:translate(0px,150px);
+			background: pink;
+			opacity: 0;
+		}
+	}
+</style>
+<script>
+	// var oHuabu=document.getElementById('huabu');
+	// oHuabu.onmousemove=function (ev) {
+	// 	var oEvent=ev||event;
+	// 	var oDiv_div10=document.createElement('div');
+	// 	oDiv_div10.setAttribute('id',"huabudiv");
+	// 	oDiv_div10.style.width='50px';
+	// 	oDiv_div10.style.height='50px';
+	// 	oDiv_div10.style.border='1px solid orange';
+	// 	oDiv_div10.style.position='absolute';
+	// 	oHuabu.appendChild(oDiv_div10);
+	// 	var scrollTop1=document.documentElement.scrollTop||document.body.scrollTop;
+	// 	var scrollLeft1=document.documentElement.scrollLeft||document.body.scrollLeft;
+	// 	oDiv_div10.style.left=oEvent.clientX+scrollLeft1+'px';
+	// 	oDiv_div10.style.top=oEvent.clientY+scrollTop1+'px';
+	// 	setTimeout(function (argument) {
+	// 		oHuabu.removeChild(oDiv_div10);
+	// 	},2000)
+	// }
+	var oHuabu=document.getElementById('huabu');
+	function neww(obj,w,h,bor) {
+		this.obj=obj;
+		obj.onmousemove=function (ev) {
+			var oEvent=ev||event;
+			var oDiv_div10=document.createElement('div');
+			oDiv_div10.setAttribute('id',"huabudiv");
+			oDiv_div10.style.width=w;
+			oDiv_div10.style.height=h;
+			oDiv_div10.style.border=bor;
+			oDiv_div10.style.position='absolute';
+			obj.appendChild(oDiv_div10);
+			var scrollTop1=document.documentElement.scrollTop||document.body	.scrollTop;
+			var scrollLeft1=document.documentElement.scrollLeft||document.body.scrollLeft;
+			oDiv_div10.style.left=oEvent.clientX+scrollLeft1+'px';
+			oDiv_div10.style.top=oEvent.clientY+scrollTop1+'px';
+			setTimeout(function (argument) {
+				obj.removeChild(oDiv_div10);
+			},2000)
+		}
+	}
+	neww.prototype.shad = function(obj) {
+		obj.style.outline='1px solid aqua'
+	};
+	var new_111=new neww(oHuabu,'100px','100px','1px solid orange');
+	new_111.shad(oHuabu);
+	// neww(oHuabu,'100px','100px','1px solid orange');
+</script>
+</body>
+<pre id="pre1">
+&lt;script&gt;
+	var oHuabu=document.getElementById('huabu');
+	function neww(obj,w,h,bor) {
+		this.obj=obj;
+		obj.onmousemove=function (ev) {
+			var oEvent=ev||event;
+			var oDiv_div10=document.createElement('div');
+			oDiv_div10.setAttribute('id',"huabudiv");
+			oDiv_div10.style.width=w;
+			oDiv_div10.style.height=h;
+			oDiv_div10.style.border=bor;
+			oDiv_div10.style.position='absolute';
+			obj.appendChild(oDiv_div10);
+			var scrollTop1=document.documentElement.scrollTop||document.body	.scrollTop;
+			var scrollLeft1=document.documentElement.scrollLeft||document.body.scrollLeft;
+			oDiv_div10.style.left=oEvent.clientX+scrollLeft1+'px';
+			oDiv_div10.style.top=oEvent.clientY+scrollTop1+'px';
+			setTimeout(function (argument) {
+				obj.removeChild(oDiv_div10);
+			},2000)
+		}
+	}
+	neww.prototype.shad = function(obj) {
+		obj.style.outline='1px solid aqua'
+	};
+	var new_111=new neww(oHuabu,'100px','100px','1px solid orange');
+	new_111.shad(oHuabu);
+&lt;/script&gt;	
+</pre>
+<style>
+	#bigboxex div{display: inline-block;background: pink;border-radius: 50%;width: 30px;height: 30px;text-align: center;line-height: 30px}
+	#bigboxex div:nth-of-type(7){background: LightCyan}
+</style>
+<div id="bigboxex">	
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<button id="startt">开始</button>
+<button id="stopp">停止</button>
+</div>
+<script>
+	var oBigboxex=document.getElementById('bigboxex');
+	var oDiv=oBigboxex.getElementsByTagName('div');
+	var oStart=document.getElementById('startt');
+	var oStop=document.getElementById('stopp');
+	var aArray222=[];
+	for (var i = 0; i < oDiv.length-1; i++) {
+			aArray222.push(parseInt(Math.random()*33));
+		}
+	
+		aArray222.push(parseInt(Math.random()*16));
+		function paixu(num1,num2){
+			return num1-num2;
+		}
+		aArray222.sort(paixu);
+		aArray222.reverse();
+		for (var i = 0; i < oDiv.length; i++) {
+			if(aArray222){
+
+			}
+		};
+	// alert(aArray222);
+	function suiji(){
+		for (var i = 0; i < oDiv.length; i++) {
+			oDiv[i].innerHTML=aArray222[i];
+		}
+	};
+	suiji();
+	function gaibian (argument) {
+		for (var i = 0; i < oDiv.length-1; i++) {
+			oDiv[i].innerHTML=parseInt(Math.random()*33);
+		}
+		oDiv[6].innerHTML=parseInt(Math.random()*16);
+	}
+	oStart.onclick=function (argument) {
+		var timers=setInterval(gaibian,100);			
+		oStop.onclick=function(){
+			clearInterval(timers)	
+		}
+	}
+</script>
+<pre>
+&lt;style&gt;
+	#bigboxex div{
+		display: inline-block;
+		background: pink;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px}
+	#bigboxex div:nth-of-type(7){
+		background: LightCyan
+	}
+&lt;/style&gt;
+&lt;div id="bigboxex"&gt;	
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;button id="startt"&gt;开始&lt;/button&gt;
+&lt;button id="stopp"&gt;停止&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+	var oBigboxex=document.getElementById('bigboxex');
+	var oDiv=oBigboxex.getElementsByTagName('div');
+	var oStart=document.getElementById('startt');
+	var oStop=document.getElementById('stopp');
+	var aArray222=[];
+	for (var i = 0; i &lt; oDiv.length; i++) {
+		aArray222.push(parseInt(Math.random()*33));
+	}
+	function paixu(num1,num2){
+		return num1-num2;
+	}
+	aArray222.sort(paixu);
+	aArray222.reverse();
+	function suiji(){
+		for (var i = 0; i &lt; oDiv.length; i++) {
+			oDiv[i].innerHTML=aArray222[i];
+		}
+	};
+	suiji();
+	function gaibian (argument) {
+		for (var i = 0; i &lt; oDiv.length; i++) {
+			oDiv[i].innerHTML=parseInt(Math.random()*33);
+		}	
+	}
+	oStart.onclick=function (argument) {
+		var timers=setInterval(gaibian,100);			
+		oStop.onclick=function(){
+			clearInterval(timers)	
+		}
+	}
+&lt;/script&gt;	
+</pre>
+<p>json方式的面向对象</p>
+<script>
+	// var obj_29={a:12,b:100,c:function (argument) {
+	// 	conslog(d)
+	// }}
+	// obj_29.c();
+</script>
+<pre>
+&lt;script&gt;
+	// var obj_29={a:12,b:100,c:function (argument) {
+	// 	conslog(d)
+	// }}
+	// obj_29.c();
+&lt;/script&gt;	
+</pre>
+<script>
+	// var obj_30={
+	// 	name:'mike',
+	// 	sex:'boy',
+	// 	showname:function (argument) {
+	// 		alert(this.name)
+	// 	},
+	// 	showsex:function (argument) {
+	// 		alert(this.sex)
+	// 	}
+	// }
+	// obj_30.showsex();
+</script>
+<pre>
+&lt;script&gt;
+缺点：只能用一次
+	// var obj_30={
+	// 	name:'mike',
+	// 	sex:'boy',
+	// 	showname:function (argument) {
+	// 		alert(this.name)
+	// 	},
+	// 	showsex:function (argument) {
+	// 		alert(this.sex)
+	// 	}
+	// }
+	// obj_30.showsex();
+&lt;/script&gt;
+</pre>
+<style>
+	#minibox{border: 1px solid cyan;padding: 10px;margin: 30px;background: HoneyDew;height: 400px;}
+	#minibox_div{border: 1px solid cyan;background: Ivory;height: 100px;width: 100px}
+</style>
+<div id="minibox">
+	<div id="minibox_div">面向对象，当然还没写阻止冒泡事件，</div>
+</div>
+<script>
+// var oMinibox_div=document.getElementById('minibox_div');//写错了，，
+	function Drag (div_name) {
+		var _this=this;
+		this.oElement=document.getElementById(div_name);
+		this.oElement.onclick=function(){
+			_this.changecolor();
+		}
+	}
+	Drag.prototype.changecolor=function (argument) {
+		this.oElement.style.background='black';
+	}
+	new Drag('minibox_div');
+	new Drag('minibox');
+</script>
+<pre>
+&lt;script&gt;
+// var oMinibox_div=document.getElementById('minibox_div');//这个东西是没用的，，
+	function Drag (div_name) {
+		var _this=this;
+		this.oElement=document.getElementById(div_name);
+		this.oElement.onclick=function(){
+			_this.changecolor();
+		}
+	}
+	Drag.prototype.changecolor=function (argument) {
+		this.oElement.style.background='black';
+	}
+	new Drag('minibox_div');
+	new Drag('minibox');
+&lt;/script&gt;	
+</pre>
+<p>继承</p>
+<script>
+	function hittt (zidingyi) {
+		var _this=this;
+		this.oElement=document.getElementById(zidingyi);
+		this.oElement.onmouseover=function (argument) {
+			_this.changecolor();
+		}
+	}
+	hittt.prototype.changecolor=function  (argument) {
+		this.oElement.style.background='skyblue';
+	}
+	// new hittt('minibox_div');
+	// 一个基本的函数,然后我们要创建一个基于这个函数的函数
+	function hitan (zidingyi) {
+		hittt.call(this,zidingyi);
+	}
+	hitan.prototype=hittt.prototype;
+	new hitan('minibox_div');
+	// function shujua(name,sex) {
+	// 	this.name=name;
+	// 	this.sex=sex;
+	// }
+	// shujua.prototype.showname=function (argument) {
+	// 	alert(this.name)
+	// }
+	// shujua.prototype.showsex=function (argument) {
+	// 	alert(this.sex)
+	// }
+	// var fan=new shujua('樊钦志','男');
+	// // fan.showsex();
+	// function shujuan (name,sex,job) {
+	// 	shujua.call(this,name,sex);
+	// 	this.job=job;
+	// }
+	// shujuan.prototype=shujua.prototype;
+	// shujuan.prototype.showjob=function (argument) {
+	// 	alert(this.job);
+	// };
+	// var ojob1=new shujuan('张俊涛','男','大学生');
+	// ojob1.showjob();
+</script>
+<pre>
+&lt;script&gt;
+	function shujua(name,sex) {
+		this.name=name;
+		this.sex=sex;
+	}
+	shujua.prototype.showname=function (argument) {
+		alert(this.name)
+	}
+	shujua.prototype.showsex=function (argument) {
+		alert(this.sex)
+	}
+	var fan=new shujua('樊钦志','男');
+	// fan.showsex();
+	function shujuan (name,sex,job) {
+		shujua.call(this,name,sex);
+		this.job=job;
+	}
+	shujuan.prototype=shujua.prototype;
+	shujuan.prototype.showjob=function (argument) {
+		alert(this.job);
+	};
+	var ojob1=new shujuan('张俊涛','男','大学生');
+	// ojob1.showjob();
+&lt;/script&gt;	
+</pre>
+<p>继承方法2(因为某行文字忘注释还找了半天的那个)</p>
+<pre>
+&lt;script&gt;
+	function hittt (zidingyi) {
+		var _this=this;
+		this.oElement=document.getElementById(zidingyi);
+		this.oElement.onmouseover=function (argument) {
+			_this.changecolor();
+		}
+	}
+	hittt.prototype.changecolor=function  (argument) {
+		this.oElement.style.background='skyblue';
+	}
+	// new hittt('minibox_div');
+	// 一个基本的函数,然后我们要创建一个基于这个函数的函数
+	function hitan (zidingyi) {
+		hittt.call(this,zidingyi);
+	}
+	hitan.prototype=hittt.prototype;
+	new hitan('minibox_div');
+&lt;/script&gt;	
+</pre>
+<script>
+	function hitan2 (zidingyi) {
+		hitan.call(this,zidingyi)
+	}
+	for(var i in hitan.prototype){
+		hitan2.prototype[i]=hitan.prototype[i];
+	}
+	hitan2.prototype.showcc=function (argument) {
+		alert('baga')
+	}
+	// alert(hitan.prototype.showcc);
+	var fn_2=new hitan2('minibox');
+	// fn_2.showcc();
+	//继承上面的一个方法
+</script>
+<pre>
+&lt;script&gt;
+	function hitan2 (zidingyi) {
+		hitan.call(this,zidingyi)
+	}//hitan2沿用了hitan的方法
+	for(var i in hitan.prototype){
+		hitan2.prototype[i]=hitan.prototype[i];
+	}//hitan2的每一个方法为hitan的方法
+	hitan2.prototype.showcc=function (argument) {
+		alert('baga')
+	}//这样hitan2新加的方法
+	//alert(hitan.prototype.showcc);//就不会出现在hitan也就是原先沿用函数的里面
+	var fn_2=new hitan2('minibox');
+	//fn_2.showcc();//鼠标移到上面的大盒子上背景会改变
+&lt;/script&gt;	
+</pre>
+<img src="img/lqbz.png" alt="">
+<!-- <p>instanceof</p> -->
+// <script>
+// 	var bbq=new Date();
+// 	// alert(bbq instanceof Array);
+// 	alert(bbq instanceof Date);
+// 	var bbqq=123;
+// 	alert(bbqq instanceof Number);
+// </script>
+</body>
+</html>
+<!-- 兼容性下的currentStyle与getCompustedStyle，构造获取属性的函数，Arguments的缺点与替代，数组的种类，数组的push,unshift,shift,pop,concat,join,join与split，splice插入与删除，reverse,sort数组的伪排序，数组的真排序，创建元素，插入元素，删除元素，终止定时setInterval,文档碎片能提高性能（理论），计时函数 -->

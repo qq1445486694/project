@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0px;}
+		#div1{position: absolute;bottom:0;text-align: center;width: 100%;border:1px solid orange;}
+	</style>
+</head>
+<body>
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="text">
+	<div id="div1">
+		<img src="img/sword2.png" alt="">
+		<img src="img/34.jpg" alt="">
+		<img src="img/78.jpg" alt="">
+		<img src="img/135.jpg" alt="">
+		<img src="img/dlls.png" alt="">
+	</div>
+</body>
+</html>
+<script>
+window.onload=function (ev) {
+			var oEvent=ev||event;
+		var oDiv=document.getElementById('div1');
+		var aImg=document.getElementsByTagName('img');
+		var oTxt=document.getElementsByTagName('input');
+		var i=0;
+
+		for (i = 0; i < aImg.length; i++) {
+			var x=aImg[i].offsetLeft+aImg[i].offsetWidth/2;
+			var y=aImg[i].offsetTop+oDiv.offsetTop+aImg[i].offsetHeight/2;
+
+			var a=x-oEvent.clientX;
+			var b=y-oEvent.clientY;
+
+			var dis=Math.sqrt(a*a+b*b);
+
+			var scale=1-dis/300;
+
+			if(scale<0.5){
+				scale=0.5
+			}
+
+			aImg[i].width=scale*128;
+
+			oTxt[i].value=scale.toFixed(2);
+		};
+}
+	document.onmousemove=function (ev) {
+		var oEvent=ev||event;
+		var oDiv=document.getElementById('div1');
+		var aImg=document.getElementsByTagName('img');
+		var oTxt=document.getElementsByTagName('input');
+		var i=0;
+
+		for (i = 0; i < aImg.length; i++) {
+			var x=aImg[i].offsetLeft+aImg[i].offsetWidth/2;
+			var y=aImg[i].offsetTop+oDiv.offsetTop+aImg[i].offsetHeight/2;
+
+			var a=x-oEvent.clientX;
+			var b=y-oEvent.clientY;
+
+			var dis=Math.sqrt(a*a+b*b);
+
+			var scale=1-dis/300;
+
+			if(scale<0.5){
+				scale=0.5
+			}
+
+			aImg[i].width=scale*128;
+
+			oTxt[i].value=scale.toFixed(2);
+		};
+	}
+</script>

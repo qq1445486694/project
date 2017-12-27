@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+</head>
+<body>
+	<p>显式定义与隐式定义</p>
+	<pre>
+		&lt;script&gt;
+		aa=12;//隐式定义 直接给变量赋值
+		var a;//显式定义 用Var定义，可以不用立即赋值
+		a=true;
+		&lt;/script&gt;
+	</pre>
+	<p>toString</p>
+	<script>
+	var b_ch=true;
+	console.log(b_ch+'lorem');
+	var b_dh=true;
+	b_dh.toString();
+	console.log(b_dh+'lorem');
+	var nA='3.123';
+	console.log(parseFloat(nA)+2);
+	</script>
+	<pre>
+&lt;script&gt;
+	var b_ch=true;
+	console.log(b_ch+'lorem');
+	var b_dh=true;
+	b_dh.toString();
+	console.log(b_dh+'lorem');
+	var nA='3.123';
+	console.log(parseFloat(nA)+2);
+&lt;/script&gt;	
+	</pre>
+	<mark>局部变量如果和全局变量重复会覆盖掉全局变量</mark>
+	<br>
+	<mark>Infinity是数值类型的无穷大</mark>
+	<p>获得浏览器版本</p>
+	<script>
+	console.log('浏览器的版本为:'+navigator.appVersion);
+	</script>
+	<pre>
+&lt;script&gt;
+	console.log('浏览器的版本为:'+navigator.appVersion);
+&lt;/script&gt;	
+<mark>数组的类型可以不相同</mark>	
+	</pre>
+	<p>三目运算符</p>
+	<script>
+	5>2 ? console.log('5大于3'):console.log('5小于3');
+	</script>
+	<pre>
+	&lt;script&gt;
+	5&gt;2 ? console.log('5大于3'):console.log('5小于3');
+	&lt;/script&gt;	
+	</pre>
+	<p>赋值</p>
+	<script>
+	var z,x,c,v;
+	z=(x=1,c=2,v=3);
+	console.log(z.toString()+x.toString()+c.toString()+v.toString());
+	</script>
+	<pre>
+&lt;script&gt;
+	var z,x,c,v;
+	z=(x=1,c=2,v=3);
+	console.log(z.toString()+x.toString()+c.toString()+v.toString());
+&lt;/script&gt;		
+	</pre>
+<p>With语句</p>
+<script>
+	with(document){
+		writeln('1<br>');
+		writeln('2<br>');
+		writeln('3<br>');
+	}
+</script>
+<pre>
+&lt;script&gt;
+	with(document){
+		writeln('1&lt;br&gt;');
+		writeln('2&lt;br&gt;');
+		writeln('3&lt;br&gt;');
+	}
+&lt;/script&gt;	
+</pre>
+<p>while循环</p>
+<script>
+var i=0;
+	while(i<10){
+		document.writeln(i+'</br>');
+		i++;
+	}
+</script>
+<hr>
+<pre>
+&lt;script&gt;
+var i=0;
+	while(i&lt;10){
+		document.writeln(i+'&lt;/br&gt;');
+		i++;
+	}
+&lt;/script&gt;	
+</pre>
+<script>
+var i=18;
+	do
+	{
+		document.writeln(i);
+		i++;
+	}
+	while(i<10);
+</script>
+<pre>
+&lt;script&gt;
+var i=18;
+	do
+	{
+		document.writeln(i);
+		i++;
+	}
+	while(i&lt;10);
+&lt;/script&gt;	
+</pre>
+<p>for in遍历出数组所以的值(不要用for in遍历数组)</p>
+<script>
+	var arr1=[100,400,200,19,17,20];
+	for (zhaoshuaifei in arr1){
+		console.log(arr1[zhaoshuaifei]);
+	}
+</script>
+<pre>
+&lt;script&gt;
+	var arr1=[100,400,200,19,17,20];
+	for (zhaoshuaifei in arr1){
+		console.log(arr1[zhaoshuaifei]);
+	}
+&lt;/script&gt;	
+</pre>
+<p>试着遍历出navigator对象的属性</p>
+<script>
+	for(pr in navigator){
+		console.log(pr+'的值为：'+navigator[pr])
+	}
+</script>
+<pre>
+&lt;script&gt;
+	for(pr in navigator){
+		console.log(pr+'的值为：'+navigator[pr])
+	}
+&lt;/script&gt;	
+</pre>
+<p>求一个阶乘</p>
+<script>
+	function jiecheng(n){
+		if(typeof(n)=='number'){
+			if(n==1){
+				return 1;
+			}else{
+				return n*jiecheng(n-1)
+			}
+		}else{
+			alert('参数类型不对！')
+		}
+	}
+	console.log(jiecheng(5));
+</script>
+<pre>
+&lt;script&gt;
+	function jiecheng(n){
+		if(typeof(n)=='number'){
+			if(n==1){
+				return 1;
+			}else{
+				return n*jiecheng(n-1)
+			}
+		}else{
+			alert('参数类型不对！')
+		}
+	}
+	console.log(jiecheng(5));
+&lt;/script&gt;	
+</pre>
+<script>
+	function fn (name,sex) {
+		this.name=name;
+		this.sex=sex;
+	}
+	function fn2 (name,sex,love) {
+		fn.apply(this,arguments);
+		this.love=love;
+	}
+	var person=new fn2('zsf','boy','sport');
+	console.log(person.name+person.sex+person.love);
+</script>
+<pre>
+&lt;script&gt;
+	function fn (name,sex) {
+		this.name=name;
+		this.sex=sex;
+	}
+	function fn2 (name,sex,love) {
+		fn.apply(this,arguments);
+		this.love=love;
+	}
+	var person=new fn2('zsf','boy','sport');
+	console.log(person.name+person.sex+person.love);
+&lt;/script&gt;	
+</pre>
+<div id="div2">
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsam, vero alias sed rem itaque enim dicta error magni, unde minima amet, nisi qui et odit fuga totam, quae ipsa.</li>
+</div>
+<script>
+	var oP=document.createElement('p');
+	oP.innerHTML='新创建的元素';
+	div2.appendChild(oP);
+	var oP_2=div2.firstChild.nextSibling.cloneNode(false);
+	oP_2.innerHTML='复制的元素';
+	div2.appendChild(oP_2);
+</script>
+<pre>
+&lt;script&gt;
+	var oP=document.createElement('p');
+	oP.innerHTML='新创建的元素';
+	div2.appendChild(oP);
+	var oP_2=div2.firstChild.nextSibling.cloneNode(false);
+	oP_2.innerHTML='复制的元素';
+	div2.appendChild(oP_2);
+&lt;/script&gt;	
+</pre>
+<img src="img/q.jpg" alt="">
+<img src="img/q2.gif" alt="">
+<script>
+	document.images[1].style.border='1px solid red'
+</script>
+<pre>
+&lt;script&gt;
+	document.images[1].style.border='1px solid red'
+&lt;/script&gt;	
+</pre>
+<a href="dierye.html">lorem</a>
+<a href="" id="forward">向前</a>
+<script>
+forward.onclick=function (argument) {
+	window.history.forward();
+}
+</script>
+<pre>
+&lt;a href="dierye.html"&gt;lorem&lt;/a&gt;
+&lt;a href="" id="forward"&gt;向前&lt;/a&gt;
+&lt;script&gt;
+forward.onclick=function (argument) {
+	window.history.forward();
+}
+&lt;/script&gt;	
+</pre>
+<script>
+	var locStr='当前的location的信息是：\n';
+	for (var pp in window.location){
+		locStr+=pp+":"+window.location[pp]+'\n'
+	}
+	console.log(locStr)
+</script>
+<pre>
+&lt;script&gt;
+	var locStr='当前的location的信息是：\n';
+	for (var pp in window.location){
+		locStr+=pp+":"+window.location[pp]+'\n'
+	}
+	console.log(locStr)
+&lt;/script&gt;	
+</pre>
+<p>遍历太麻烦了，干脆设个函数吧,这个是窗口的各种信息</p>
+<script>
+function bianliduixiang (duixiang) {
+	var locStr='当前的'+duixiang+'的信息是：\n';
+	for (var pp in duixiang){
+		locStr+=pp+":"+duixiang[pp]+'\n'
+	}
+	console.log(locStr)
+}
+new bianliduixiang(window.screen);
+</script>
+<pre>
+&lt;script&gt;
+function bianliduixiang (duixiang) {
+	var locStr='当前的'+duixiang+'的信息是：\n';
+	for (var pp in duixiang){
+		locStr+=pp+":"+duixiang[pp]+'\n'
+	}
+	console.log(locStr)
+}
+new bianliduixiang(screen);
+&lt;/script&gt;	
+</pre>
+<hr>
+<p>分析时间性能</p>
+<script>
+	// var start_t=new Date().getTime();
+	function load (argument) {
+		var now_time=new Date().getTime();
+		var page_load_time=now_time-performance.timing.navigationStart;
+		console.log(page_load_time);
+	}
+	window.onload=load()
+</script>
+<pre>
+&lt;script&gt;
+	//var start_t=new Date().getTime();
+	function load (argument) {
+		var now_time=new Date().getTime();
+		var page_load_time=now_time-performance.timing.navigationStart;
+		alert(page_load_time);
+	}
+	window.onload=load()
+&lt;/script&gt;	
+</pre>
+<script>
+	switch(performance.navigation.type){
+		case 0:console.log('正常导航进该页面！');break;
+		case 1:console.log('正常导航进该页面！');break;
+		case 2:console.log('正常导航进该页面！');break;
+		default:console.log('正常导航进该页面！');break;
+	}
+</script>
+<pre>
+&lt;script&gt;
+	switch(performance.navigation.type){
+		case 0:console.log('正常导航进该页面！');break;
+		case 1:console.log('正常导航进该页面！');break;
+		case 2:console.log('正常导航进该页面！');break;
+		default:console.log('正常导航进该页面！');break;
+	}
+&lt;/script&gt;	
+</pre>
+<p>Session Storage 他保存数据的期限与用户Session期限相同，也就是用户第一次访问某网站开始，到用户关闭浏览器，离开该网站的这段时间</p>
+<p>Local Storage 保存在用户磁盘的Web Storage</p>
+<input type="text" id='inp'>
+使用local Storage保存: <input type="checkbox" id='local'>
+<div id="show"></div>
+<input type="button" value="保存数据" onclick="saveStorage('inp')">	
+<input type="button" value="读取数据" onclick="loadStorage('show')">	
+<script>
+	var saveStorage= function (id) {
+		var checked=document.getElementById('local').checked;
+		var storage=checked ? localStorage : sessionStorage;
+		var target=document.getElementById(id);
+		storage.setItem("message",target.value);
+	}
+	// document.getElementById('local').text=storage.getItem("message",target.value);
+	var loadStorage= function (id) {
+		var checked=document.getElementById('local').checked;
+		var storage=checked ? localStorage : sessionStorage;
+		var target=document.getElementById(id);
+		document.getElementById('inp').value=storage.getItem("message");
+	}
+</script>
+<pre>
+&lt;input type="text" id='inp'&gt;
+使用local Storage保存: &lt;input type="checkbox" id='local'&gt;
+&lt;div id="show"&gt;&lt;/div&gt;
+&lt;input type="button" value="保存数据" onclick="saveStorage('inp')"&gt;	
+&lt;input type="button" value="读取数据" onclick="loadStorage('show')"&gt;	
+&lt;script&gt;
+	var saveStorage= function (id) {
+		var checked=document.getElementById('local').checked;
+		var storage=checked ? localStorage : sessionStorage;
+		var target=document.getElementById(id);
+		storage.setItem("message",target.value);
+	}
+	var loadStorage= function (id) {
+		var checked=document.getElementById('local').checked;
+		var storage=checked ? localStorage : sessionStorage;
+		var target=document.getElementById(id);
+		target.innerHTML=storage.getItem("message");
+	}
+&lt;/script&gt;	
+</pre>
+Name:<input type="text" id="input1"><br>
+Password:<input type="text" id="input2">
+<button id="btn1">保存</button>
+<button id="btn2">原先</button>
+<script>
+var input1=document.getElementById('input1');
+input1.value=localStorage.getItem('name_4');
+	btn1.onclick=function (argument) {
+		localStorage.setItem("name_4",input1.value)
+	}
+	btn2.onclick=function (argument) {
+		input1.value=localStorage.getItem('name_4')
+	}
+</script>
+<p>使用Worker创建多线程</p>
+<div id="bigbox1"></div>
+<script>
+	var body=document.getElementsByTagName('body')[0];
+	var worker=new Worker('js/you.js');
+	worker.onmessage=function (event) {
+		body.innerHTML+=event.data+",";
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+</body>
+<script>
+var body=document.getElementsByTagName('body')[0];
+	$.ajax({
+		url:"in.json",
+		datatype:"json",
+		success: function(data){
+				body.innerHTML+=data.lily[2].title1;
+	body.innerHTML+=data.hu[2].id;
+		}
+	})
+$.getJSON("in.json",function(data){
+	body.innerHTML+=data.lily[2].yu[0].fd;
+	body.innerHTML+=data.hu[0].id;
+})
+</script>
+</html>

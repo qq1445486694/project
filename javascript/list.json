@@ -1,0 +1,24 @@
+{
+	"food":[
+		{"id":"1","img":"img/q_04.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"2","img":"img/q_06.jpg","name":"邮费补全差价","price":"￥1","content":"原价：30元"},
+		{"id":"3","img":"img/q_09.jpg","name":"五星级大厨学做营养汤","price":"￥23.8","content":"原价：230元"},
+		{"id":"4","img":"img/q_10.jpg","name":"五星级大厨学做营养汤","price":"￥29","content":"原价：230元"},
+		{"id":"1","img":"img/q_04.jpg","name":"五星级大厨学做营养汤","price":"￥29","content":"原价：230元"},
+		{"id":"2","img":"img/q_06.jpg","name":"五星级大厨学做营养汤","price":"￥29","content":"原价：230元"},
+		{"id":"3","img":"img/q_09.jpg","name":"五星级大厨学做营养汤","price":"￥31.8","content":"原价：230元"},
+		{"id":"4","img":"img/q_10.jpg","name":"五星级大厨学做营养汤","price":"￥31.8","content":"原价：230元"},
+		{"id":"1","img":"img/q_04.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"2","img":"img/q_06.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"3","img":"img/q_09.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"4","img":"img/q_10.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"1","img":"img/q_04.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"2","img":"img/q_06.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"3","img":"img/q_09.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"4","img":"img/q_10.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"1","img":"img/q_04.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"2","img":"img/q_06.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"3","img":"img/q_09.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"},
+		{"id":"4","img":"img/q_10.jpg","name":"五星级大厨学做营养汤","price":"￥82","content":"原价：30元"}
+	]
+}

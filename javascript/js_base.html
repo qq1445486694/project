@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<style>
+	html{background: GhostWhite}
+/*	header{height:50px;background:-webkit-linear-gradient(Cyan 0%,HoneyDew 80%);line-height: 50px;text-align: center;}*/
+	div{width: 100px;height: 100px;margin: 10px;background:Cyan;display: inline-block;}
+	#box{float: left}
+	</style>
+</head>
+<body>
+	<div id="box">#box鼠标移入时#box1背景色变成黄色</div>
+	<div id="box1">#box1</div>
+	<script>
+		var box=document.getElementById("box");
+		var box1=document.getElementById("box1");
+		box.onmouseover=function function_name (argument) {
+			box1.style.background='yellow';
+		}
+	</script>
+	<pre>
+	&lt;div id="box"&gt;#box鼠标移入时#box1背景色变成黄色&lt;/div&gt;
+	&lt;div id="box1"&gt;#box1&lt;/div&gt;
+	&lt;script&gt;
+		var box=document.getElementById("box");
+		var box1=document.getElementById("box1");
+		box.onmouseover=function function_name (argument) {
+			box1.style.background='yellow';
+		}
+	&lt;/script&gt;
+	</pre>
+	<div>鼠标移入添加样式</div>
+	<style>
+		.yangshi{background: pink;border: 1px solid orange}
+	</style>
+	<script>
+		var div=document.getElementsByTagName('div');
+		div[2].onmouseover=function function_name (argument) {
+			div[2].className='yangshi';
+		}
+	</script>
+	<pre>
+	&lt;div&gt;鼠标移入添加样式&lt;/div&gt;
+	&lt;style&gt;
+		.yangshi{background: pink;border: 1px solid orange}
+	&lt;/style&gt;
+	&lt;script&gt;
+		var div=document.getElementsByTagName('div'); //定义一个名字div为所以div的元素
+		div[2].onmouseover=function function_name (argument) { //其中的第三个 div[2]
+			div[2].className='yangshi';
+		}
+	&lt;/script&gt;
+	</pre>
+	<p>改变样式表的href做成网页换肤的效果(点击按钮)</p>
+	<iframe src="zi.html" frameborder="0" width=400px height=400px style="border:1px solid orange"></iframe>
+	<pre>
+	&lt;link rel="stylesheet" href="css/waibu2.css" id="link1"&gt;
+	&lt;button&gt;点击&lt;/button&gt;
+	&lt;script&gt;
+		var btn=document.getElementsByTagName('button');
+		var link1=document.getElementById('link1');
+		btn[0].onclick=function function_name (argument) {
+			link1.href='css/waibu.css'
+		}
+	&lt;/script&gt;
+	</pre>
+	<div>
+	<h5>title</h5>
+	<center>
+		<div id="good">
+		</div>
+	</center>
+		<small>Alex</small>
+		<br>
+		<img src="img/q.png" alt="">
+		<img src="img/q.png" alt="">
+		<img src="img/q.png" alt="">
+		<p>积分<small>12</small></p>
+		<p>威望<small>122</small></p>
+		<p>帖子<small>132</small></p>
+		<p>金币<small>12</small></p>
+		<p>体力<small>12</small></p>
+		<p>HP<small>12</small></p>
+		<p>MP<small>12</small></p>
+		<p>lorem<small>12</small></p>
+	<section id="sec">
+		<div></div>
+		<aside>
+			<p>当前在线</p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+		</aside>
+		<p>
+		<img src="img/q.png" alt="">
+		<img src="img/q.png" alt="">
+		<img src="img/q.png" alt="">
+		</p>		
+	</section>
+	</div>
+	<style>
+		div:nth-of-type(4){border: 1px solid gray;width: 200px;height: 500px;background: GhostWhite;padding-left: 40px;position: relative;}
+		#good{background: url(img/good.jpg) 100% 100%;background-size:cover;border: 1px solid pink;margin-left: -40px;margin-top:15px;}
+		#sec>div{background: url(img/zhe.jpg) 100% 100%;background-size:cover;border: 1px solid pink;margin-left: -40px;margin-top:15px;}
+		div img{width: 16px;height: 16px;margin-bottom: 16px}
+		div:nth-of-type(4) small{margin-left: 15px}
+		div:nth-of-type(4)>section{padding:10px;border: 1px solid orange;background:white;width: 400px;height: 200px;margin: 0px;top:40px;left:-1px;position: absolute;display: none}
+		section>div{position: absolute;left:84px;top:-6px;}
+		section>aside{margin-left:150px;}
+		section:nth-of-type(1){background:red;}
+		section{background:yellow;}
+		section small{width: 50px;display: inline-block;}
+		div:nth-of-type(4)>section>p{position: absolute;top:130px;left:60px;}
+		#sec{z-index: 10}
+/*		div:nth-of-type(7){background:url(img/good.jpg) 100% 100%;background-size:cover;border: 1px solid pink;margin: 0px}*/
+	</style>
+	<script>
+	var section=document.getElementsByTagName('section');
+	var sec=document.getElementById('sec');
+	var good=document.getElementById('good')
+	good.onmouseover=function function_name (argument) {
+		sec.style.display="block";
+	}
+	sec.onmouseover=function function_name (argument) {
+		sec.style.display="block";
+	}
+	sec.onmouseout=function function_name (argument) {
+		sec.style.display="none";
+	}
+	</script>
+	<pre>
+	&lt;script&gt;
+	var section=document.getElementsByTagName('section');
+	var sec=document.getElementById('sec');
+	var good=document.getElementById('good')
+	good.onmouseover=function function_name (argument) {
+		sec.style.display="block";
+	}
+	sec.onmouseover=function function_name (argument) {
+		sec.style.display="block";
+	}
+	sec.onmouseout=function function_name (argument) {
+		sec.style.display="none";
+	}
+	&lt;/script&gt;	
+	</pre>
+	<p id="p1">You want konw? click me<img src="img/q2.png" alt="" id="img1"></p>
+	<ul>
+		<li>I'don'know</li>
+		<li>I'don'know</li>
+		<li>I'don'know</li>
+		<li>I'don'know</li>
+		<li>I'don'know</li>
+	</ul>
+	<style>
+		#p1{border: 1px solid orange;display: inline-block;}
+		ul:nth-of-type(1){visibility: hidden;outline: 1px solid orange;width: 200px}
+	</style>
+	<script>
+	var p1=document.getElementById('p1');
+	var ul=document.getElementsByTagName('ul');
+	p1.onclick=function () {
+		if(ul[0].style.visibility=="visible"){
+		ul[0].style.visibility="hidden";
+		img1.src="img/q2.png";
+		}else{
+		ul[0].style.visibility="visible";
+		img1.src="img/q.png";
+		}
+	}
+	</script>
+	<pre>
+	&lt;script&gt;
+	var p1=document.getElementById('p1');
+	var ul=document.getElementsByTagName('ul');
+	p1.onclick=function () {
+		if(ul[0].style.visibility=="visible"){
+		ul[0].style.visibility="hidden";
+		img1.src="img/q2.png";
+		}else{
+		ul[0].style.visibility="visible";
+		img1.src="img/q.png";
+		}
+	}
+	&lt;/script&gt;		
+	</pre>
+	<style>
+		#bigbox div{height: 200px;border: 1px solid orange;width: 100%;margin:0px;background:Ivory;display: none;padding: 20px}
+		#bigbox div img{width: 110px;height: 150px;}
+		#bigbox div.active1{display: block;}
+		#bigbox{width: 100%;margin: 0px;background: none}
+	</style>
+	<ul class="nav nav-tabs" id="ul1">
+		<li class="active"><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+	</ul>
+	<script>
+	var ul1=document.getElementById('ul1').getElementsByTagName('li');
+	for (var i = 0; i < ul1.length; i++) {
+		ul1[i].onclick=function  (argument) {
+			for (var i = 0; i < ul1.length; i++) {
+				ul1[i].className=""
+			};
+			this.className="active"
+		}
+	};
+	</script>
+	<pre>
+	&lt;script&gt;
+	var ul1=document.getElementById('ul1').getElementsByTagName('li');
+	for (var i = 0; i &lt; ul1.length; i++) {
+		ul1[i].onclick=function  (argument) {
+			for (var i = 0; i &lt; ul1.length; i++) {
+				ul1[i].className=""
+			};
+			this.className="active"
+		}
+	};
+	&lt;/script&gt;		
+	</pre>
+	
+</body>
+</html>

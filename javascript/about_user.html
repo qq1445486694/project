@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<style>
+	html{background: GhostWhite}
+/*	header{height:50px;background:-webkit-linear-gradient(Cyan 0%,HoneyDew 80%);line-height: 50px;text-align: center;}*/
+	div{width: 100px;height: 100px;margin: 10px;display: inline-block;}
+	#box{float: left}
+	</style>
+</head>
+<body>
+
+
+	<div>
+	<h5>title</h5>
+	<center>
+		<div id="good">
+		</div>
+	</center>
+		<small>Alex</small>
+		<br>
+		<img src="img/q.png" alt="">
+		<img src="img/q.png" alt="">
+		<img src="img/q.png" alt="">
+		<p>积分<small>12</small></p>
+		<p>威望<small>122</small></p>
+		<p>帖子<small>132</small></p>
+		<p>金币<small>12</small></p>
+		<p>体力<small>12</small></p>
+		<p>HP<small>12</small></p>
+		<p>MP<small>12</small></p>
+		<p>lorem<small>12</small></p>
+	<section id="sec">
+		<div></div>
+		<aside>
+			<p>当前在线</p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+			<p><small>阅读权限</small><small>12</small><small>阅读权限</small></p>
+		</aside>
+		<p>
+		<img src="img/q.png" alt="">
+		<img src="img/q.png" alt="">
+		<img src="img/q.png" alt="">
+		</p>		
+	</section>
+	</div>
+	<style>
+		div:nth-of-type(1){border: 1px solid gray;width: 200px;height: 500px;background: GhostWhite;padding-left: 40px;position: relative;}
+		#good{background: url(img/good.jpg) 100% 100%;background-size:cover;border: 1px solid pink;margin-left: -40px;margin-top:15px;width: 100px;height: 100px;}
+		#sec>div{background: url(img/zhe.jpg) 100% 100%;background-size:cover;border: 1px solid pink;margin-left: -49px;margin-top:5px;width: 100px;height: 100px;}
+		div img{width: 16px;height: 16px;margin-bottom: 16px}
+		div:nth-of-type(1) small{margin-left: 15px}
+		div:nth-of-type(1)>section{padding:10px;border: 1px solid orange;background:white;width: 400px;height: 200px;margin: 0px;top:40px;left:-1px;position: absolute;display: none}
+		section>div{position: absolute;left:84px;top:-6px;}
+		section>aside{margin-left:150px;margin-top: -110px}
+		section:nth-of-type(1){background:red;}
+		section{background:yellow;}
+		section small{width: 50px;display: inline-block;}
+		div:nth-of-type(1)>section>p{position: absolute;top:130px;left:60px;}
+/*		div:nth-of-type(7){background:url(img/good.jpg) 100% 100%;background-size:cover;border: 1px solid pink;margin: 0px}*/
+	</style>
+	<script>
+	var section=document.getElementsByTagName('section');
+	var sec=document.getElementById('sec');
+	var good=document.getElementById('good');
+	good.onmouseover=function function_name (argument) {
+		sec.style.display="block";
+	}
+	sec.onmouseover=function function_name (argument) {
+		sec.style.display="block";
+	}
+	sec.onmouseout=function function_name (argument) {
+		sec.style.display="none";
+		// sec.style.display="block";
+	}
+	</script>
+</body>
+</html>
