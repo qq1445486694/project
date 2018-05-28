@@ -1,0 +1,40 @@
+		*{
+			margin: 0px auto;
+			padding: 0px;
+			box-sizing:border-box;
+		}
+		aside,section{
+			border:2px solid brown;
+			padding: 6px;
+			background: Ivory
+		}
+		aside{
+			width: 200px;
+			background: Ivory;
+			overflow-y: scroll;
+			
+			position: fixed;
+			max-height: 98%
+		}
+		section{
+			min-height: 100%;
+			margin-left: 230px;
+			min-width: 600px;
+			width: 100%;
+		}
+		body{
+			min-height: 100%;
+			padding: 6px;
+			background: GhostWhite;
+			display: flex;
+		}
+		html{
+			height: 100%;
+			min-height: 100%;
+		}
+		h1, h2, h3, h4, h5, h6, form, p, p, i, img, ul, li, ol, table, tr, td,th, fieldset, label, legend,button,input { margin:0;padding:0;}
+		li{list-style:none;}
+		a img{border:none;}
+		a:link{text-decoration:none;color:#07519A;}
+		a:visited{text-decoration:none;color:#07519A;}
+		a:active,a:hover{text-decoration:underline;color:#07519A;}
