@@ -66,6 +66,7 @@
 }
 .swiper-slide7{
 	position: relative;
+	min-width : 1280px
 }
 .footer{
 	height: 120px;
