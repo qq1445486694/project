@@ -1,0 +1,134 @@
+
+	<style>
+		#sanjiao{
+			width: 0;
+			height: 0;
+			border-width: 50px;
+			border-style: solid;
+			border-color: red transparent transparent transparent;
+		}
+		.Article {
+  overflow: hidden;
+}
+
+.Article>li {
+  float: left;
+  margin-bottom: -9999px;
+  padding-bottom: 9999px;
+  background: #4577dc;
+  width: 200px;
+  color: #fff;
+}
+
+.Article>li>p {
+  padding: 10px;
+}
+h4{
+    border: 1px solid forestgreen;
+    padding: 8px;
+    background: honeydew;
+  }
+	</style>
+<h4>三角</h4>
+<div id="sanjiao">
+	
+</div>	
+<pre>
+#sanjiao{
+      width: 0;
+      height: 0;
+      border-width: 100px;
+      border-style: solid;
+      border-color: red transparent transparent transparent;
+    }  
+</pre>
+<h4>
+  等高布局
+</h4>
+ <ul class="Article">
+    <li class="js-article-item">
+      <p>
+      一家将客户利益置于首位的经纪商，
+      为客户提供专业的交易工具一家将客户利益置于首位的经纪商，
+      为客户
+      </p>
+    </li>
+    <li class="js-article-item">
+      <p>一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
+      一家将客户利益置于首位的经纪商，为客户提供专业的交易工具</p>
+    </li>
+    <li class="js-article-item">
+      <p>一家将客户利益置于首位的经纪商</p>
+    </li>
+  </ul>
+  <div>
+<pre>
+.Article>li {
+  float: left;
+  margin-bottom: -9999px;
+  padding-bottom: 9999px;
+  background: #4577dc;
+  width: 200px;
+  color: #fff;
+}
+
+.Article>li>p {
+  padding: 10px;
+}
+</pre>
+<h4>
+  关于base64编码（一种图片处理格式）
+</h4>
+<pre>
+ base64编码是一种图片处理格式，通过特定的算法将图片编码成一长串字符串，在页面上显示的时候，可以用该字符串来代替图片的
+url属性。
+
+使用base64的优点是：
+
+（1）减少一个图片的HTTP请求
+
+使用base64的缺点是：
+
+（1）根据base64的编码原理，编码后的大小会比原文件大小大1/3，如果把大图片编码到html/css中，不仅会造成文件体
+积的增加，影响文件的加载速度，还会增加浏览器对html或css文件解析渲染的时间。
+
+（2）使用base64无法直接缓存，要缓存只能缓存包含base64的文件，比如HTML或者CSS，这相比域直接缓存图片的效果要
+差很多。
+
+（3）兼容性的问题，ie8以前的浏览器不支持。
+
+一般一些网站的小图标可以使用base64图片来引入。
+webkit内核的私有属性：-webkit-font-smoothing，用于字体抗锯齿，使用后字体看起来会更清晰舒服。
+以下代码可解决这种卡顿的问题：-webkit-overflow-scrolling:touch;是因为这行代码启用了硬件加速特性，所以滑动很流
+畅。  
+</pre>
+ 
+  </div>
+<h4>浏览器如何判断是否支持 webp 格式图片</h4>
+<pre>
+（1）宽高判断法。通过创建image对象，将其src属性设置为webp格式的图片，然后在onload事件中获取图片的宽高，如
+果能够获取，则说明浏览器支持webp格式图片。如果不能获取或者触发了onerror函数，那么就说明浏览器不支持webp格
+式的图片。
+
+（2）canvas判断方法。我们可以动态的创建一个canvas对象，通过canvas的toDataURL将设置为webp格式，然后判断
+返回值中是否含有image/webp字段，如果包含则说明支持WebP，反之则不支持。
+网站向服务器请求的时候，会自动带上cookie这样增加表头信息量，使请求变慢。
+
+如果静态文件都放在主域名下，那静态文件请求的时候都带有的cookie的数据提交给server的，非常浪费流量，所以不如隔离开
+，静态资源放CDN。  
+</pre>
+<h4>60.什么是 Cookie 隔离？（或者说：请求资源的时候不要让它带 cookie 怎么做）</h4>
+<pre>
+因为cookie有域的限制，因此不能跨域提交请求，故使用非主要域名的时候，请求头中就不会带有cookie数据，这样可以降低请
+求头的大小，降低请求时间，从而达到降低整体请求延时的目的。
+
+同时这种方式不会将cookie传入WebServer，也减少了WebServer对cookie的处理分析环节，提高了webserver的
+http请求的解析速度。  
+</pre>
+<h4>67.transition 和 animation 的区别</h4>
+
+<pre>
+transition关注的是CSSproperty的变化，property值和时间的关系是一个三次贝塞尔曲线。
+
+animation作用于元素本身而不是样式属性，可以使用关键帧的概念，应该说可以实现更自由的动画效果。  
+</pre>

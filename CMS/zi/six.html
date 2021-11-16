@@ -1,0 +1,146 @@
+<style>
+	h4{
+		border: 1px solid forestgreen;
+		padding: 8px;
+		background: honeydew;
+	}
+	main div{
+		padding: 8px;
+	}
+	main div h4.ex{
+		background: hotpink;
+	}
+</style>
+<pre>
+function getutag(utag) {
+		var utag=document.getElementsByTagName(utag);
+		return utag;
+	}
+var lt=getutag('div');
+let sixarray=[19,17,82,52,1080];	
+</pre>
+
+<main id="sixbox">
+	<div id="sixbox_1">
+		<h4>数组</h4>
+	</div>
+<pre>
+lt[0].innerHTML+=sixarray;	
+</pre>
+<div id="sixbox_2">
+<h4>
+	push尾部添加：
+</h4>
+</div>
+<pre>
+sixarray.push('1');
+lt[1].innerHTML+=sixarray;
+</pre>	
+<div>
+	<h4>unshift向前添加</h4>
+</div>
+<pre>
+sixarray.unshift('2060');
+lt[2].innerHTML+=sixarray;	
+</pre>
+<div>
+	<h4>pop尾部删除</h4>
+</div>
+<pre>
+sixarray.pop();
+lt[3].innerHTML+=sixarray;
+</pre>
+<div>
+	<h4>shift头部删除</h4>
+</div>
+<pre>
+sixarray.shift();
+lt[4].innerHTML+=sixarray;
+</pre>
+<div>
+<h4 class='ex'>sort首字母正排序</h4>
+</div>
+<pre>
+var sixarray_2=['alice','ordiric','31','obnixilis','9821','charich','zzward','alexchander']
+sixarray_2.sort();
+lt[5].innerHTML+=sixarray_2;
+</pre>
+<div>
+	<h4>数字从小到大排序</h4>
+</div>
+<pre>
+function sortnum(a,b) {
+		return a-b
+	}
+lt[6].innerHTML+=sixarray.sort(sortnum);
+</pre>
+<div>
+	<h4>concat链接数组</h4>
+</div>
+<pre>
+lt[7].innerHTML+=sixarray.concat(sixarray_2);
+</pre>
+<div>
+	<h4>join插入</h4>
+</div>
+<pre>
+lt[8].innerHTML+=sixarray.join('virus');	
+</pre>
+<div>
+	<h4>splice两个参数时(从第几个之后开始，显示多少个)</h4>
+</div>
+<pre>
+lt[9].innerHTML+=sixarray.splice(2,3);
+</pre>
+<div>
+	<h4 class='ex'>splice多个参数时(从第几个之后开始，删除多少个，添加数据)</h4>
+</div>
+<pre>
+var sixarray_3=[8,54,298,15,2,571,79];
+sixarray_3.splice(3,2,4,4,4,4);
+lt[10].innerHTML+=sixarray_3;
+</pre>
+<div>
+	<h4 class='ex'>reverse()数组反转</h4>
+</div>
+<pre>
+var sixarray_4=[100,1060,2060,980,1660,1070];
+lt[11].innerHTML+=sixarray_4+'&lt;br/&gt;';
+lt[11].innerHTML+=sixarray_4.reverse();
+</pre>
+</main>
+
+
+<script>
+	function getutag(utag) {
+		var utag=document.getElementsByTagName(utag);
+		return utag;
+	}
+	var lt=getutag('div');
+	let sixarray=[19,17,82,52,1080];
+	lt[0].innerHTML+=sixarray;
+	sixarray.push('1660');
+	lt[1].innerHTML+=sixarray;
+	sixarray.unshift('2060');
+	lt[2].innerHTML+=sixarray;
+	sixarray.pop();
+	lt[3].innerHTML+=sixarray;
+	sixarray.shift();
+	lt[4].innerHTML+=sixarray;
+	var sixarray_2=['alice','ordiric','31','obnixilis','9821','charich','zzward','alexchander']
+	sixarray_2.sort();
+	lt[5].innerHTML+=sixarray_2;
+	function sortnum(a,b) {
+		return a-b
+	}
+	lt[6].innerHTML+=sixarray.sort(sortnum);
+	lt[7].innerHTML+=sixarray.concat(sixarray_2);
+	lt[8].innerHTML+=sixarray.join('virus');
+	lt[9].innerHTML+=sixarray.splice(2,3);
+	var sixarray_3=[8,54,298,15,2,571,79];
+	sixarray_3.splice(3,2,4,4,4,4);
+	lt[10].innerHTML+=sixarray_3;
+	var sixarray_4=[100,1060,2060,980,1660,1070];
+	lt[11].innerHTML+=sixarray_4+'<br/>';
+	lt[11].innerHTML+=sixarray_4.reverse();
+</script>

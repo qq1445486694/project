@@ -1,0 +1,140 @@
+
+	<style>
+		#ptbox{
+			width: 100px;
+			border: 1px solid darkblue;
+		}
+		#ul1{
+			font-size: 0;
+		}
+		#ul1 li{
+			display: inline-block;
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid orange;
+		}
+		#ul1 li.active{
+			box-sizing: border-box;
+			border: 1px solid blue;
+			background: lightpink;
+		}
+		#bigbox div{
+			display: none;
+			border: 1px solid darkblue;
+			padding: 15px;
+
+			margin: 20PX;
+		}
+		#bigbox div.act{
+			display: block;
+		}
+	</style>
+
+	<ul id="ul1">
+		<li class="active"><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+		<li><a href="javascript:;">lorem</a></li>
+	</ul>
+	<div id="bigbox">
+		
+	<div class="act"><img src="../img/sword.png" alt=""></div>
+	<div><img src="../img/angle.png" alt=""></div>
+	<div><img src="../img/ayeni.jpg" alt=""></div>
+	<div><img src="../img/baijvxie.jpg" alt=""></div>
+	<div><img src="../img/mqs.jpg" alt=""></div>
+	</div>
+<pre>
+<!-- 	&lt;style&gt;
+		#ptbox{
+			width: 100px;
+			border: 1px solid darkblue;
+		}
+		#ul1 li{
+			display: inline-block;
+			padding: 6px;
+		}
+		.active{
+			background: hotpink;
+		}
+		#bigbox div{
+			display: none;
+			border: 1px solid darkblue;
+			padding: 15px;
+			height: 100px;
+
+		}
+		#bigbox div.act{
+			display: block;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;ul id="ul1"&gt;
+		&lt;li class="active"&gt;lorem&lt;/li&gt;
+		&lt;li&gt;lorem&lt;/li&gt;
+		&lt;li&gt;lorem&lt;/li&gt;
+		&lt;li&gt;lorem&lt;/li&gt;
+		&lt;li&gt;lorem&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div id="bigbox"&gt;
+		
+	&lt;div class="act"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus facilis consectetur accusantium.&lt;/div&gt;
+	&lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, aperiam doloribus deleniti.&lt;/div&gt;
+	&lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt assumenda in corporis.&lt;/div&gt;
+	&lt;div&gt;Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Necessitatibus veniam dignissimos tempore!&lt;/div&gt;
+	&lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dicta perspiciatis, assumenda!&lt;/div&gt;
+	&lt;/div&gt;	 -->
+&lt;script&gt;
+<!-- 	function getuid(uid) {
+		var uid=document.getElementById(uid);
+		return uid;
+	}
+	function gettag(uid,tag) {
+		var tag=uid.getElementsByTagName(tag);
+		return tag;
+	}
+	// getuid('ptbox');
+	// ptbox.style.height='100px';
+	var list1=gettag(getuid('ul1'),'li');
+	var list2=gettag(getuid('bigbox'),'div') -->
+	for (let i = list1.length - 1; i &gt;= 0; i--) {
+		list1[i].onclick=function (argument) {
+			for (let i = list1.length - 1; i &gt;= 0; i--) {
+				list1[i].className='';
+				list2[i].className=''
+			}
+			this.className='active';
+			this.index=i;			
+			list2[i].className='act'
+		}
+	}
+&lt;/script&gt;	
+	</pre>
+
+<script>
+	function getuid(uid) {
+		var uid=document.getElementById(uid);
+		return uid;
+	}
+	function gettag(uid,tag) {
+		var tag=uid.getElementsByTagName(tag);
+		return tag;
+	}
+	// getuid('ptbox');
+	// ptbox.style.height='100px';
+	var list1=gettag(getuid('ul1'),'li');
+	var list2=gettag(getuid('bigbox'),'div')
+	for (let i = list1.length - 1; i >= 0; i--) {
+		list1[i].onclick=function (argument) {
+			for (let i = list1.length - 1; i >= 0; i--) {
+				list1[i].className='';
+				list2[i].className=''
+			}
+			this.className='active';
+			this.index=i;			
+			list2[i].className='act'
+		}
+	}
+</script>

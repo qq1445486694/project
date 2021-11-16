@@ -1,0 +1,454 @@
+<style>
+    h4{
+        border: 1px solid forestgreen;
+        padding: 8px;
+        background: honeydew;
+    }
+    #sevenbigbox div{
+        min-height: 50px;
+    }
+    #overflow_7 p{
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border: 1px solid red;
+        padding: 20px;
+    }
+    #overflow_7_2{
+        width: 400px;
+    }
+    #overflow_7_2 P{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /*限制多少行*/
+        overflow: hidden;
+    }
+    pre{
+        white-space: pre-wrap;
+    }
+    #word_shadow p{
+        text-shadow: 5px 10px 5px darkblue;
+    }
+    #input_placeholder input::placeholder{
+        color: red;
+    }
+    #scrollbar_style pre{
+        white-space: nowrap;
+    }
+    #scrollbar_style pre::-webkit-scrollbar{
+        width: 10px;
+        height: 10px;
+    }
+    #scrollbar_style pre::-webkit-scrollbar-thumb {
+       border-radius   : 10px;
+       background-color: skyblue;
+    }
+    #text_space p{
+        letter-spacing: 2px;
+        text-indent: 20px;
+    }
+    #duiqi{
+        padding: 50px;
+    }
+    #duiqi p:first-child{
+        text-align: justify;
+    }
+    #unselect p{
+    user-select: none;
+    }
+    .notice{
+        background: red;
+    }
+    #zimu p{
+        margin: 10px 0px;
+    }
+    #zimu p:nth-child(2){
+        text-transform: uppercase;
+    }
+    #zimu p:nth-child(3){
+        text-transform: lowercase;
+    }
+    #zimu p:nth-child(4){
+        text-transform: capitalize;
+    }
+    #zimu p:nth-child(5){
+        font-variant: small-caps
+    }
+    #opacity{
+        background: lime;
+    }
+    #opacity div{
+        width: 100px;
+        height: 100px;
+        background: red;
+        opacity: 0.5;
+    }
+
+    </style>
+
+<div id="sevenbigbox">
+    <h4>文字溢出部分省略号（单行）</h4>
+    <div id="overflow_7">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Cum aspernatur harum, rerum dicta consectetur enim, voluptatum atque quisquam, incidunt ab exercitationem maiores optio fuga accusamus sapiente? Expedita eius impedit dolores?</p>
+    </div>
+    <pre>
+   &lt;style&gt;
+       #overflow_7 p{
+        width: 200px;
+        overflow: hidden;        //超过这个元素的宽度就隐藏
+        text-overflow: ellipsis; //文本溢出省略号
+        white-space: nowrap;     //永不换行
+        border: 1px solid red;
+        padding: 20px;
+    }
+   &lt;/style&gt;     
+
+    </pre>
+    <h4>文字溢出部分省略号（多行）</h4>
+    <div id="overflow_7_2">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam tenetur ex rem quae reprehenderit, sint quisquam molestiae officiis saepe corporis quos quod in ducimus id ab voluptatibus, aperiam at?</p>   
+    </div>
+    <pre>
+&lt;div id="overflow_7_2"&gt;
+     &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam tenetur ex rem quae reprehenderit, sint quisquam molestiae officiis saepe corporis quos quod in ducimus id ab voluptatibus, aperiam at?&lt;/p&gt;   
+&lt;/div&gt;
+&lt;style&gt;
+    #overflow_7_2{
+        width: 400px;
+    }
+    #overflow_7_2 P{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /*限制多少行*/
+        overflow: hidden;
+    }
+&lt;/style&gt;    
+    </pre>
+ <h4>文字阴影</h4>
+    <div id="word_shadow">
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, dolore esse amet veritatis repellat nisi sed soluta autem quo nam sequi. Esse, qui. Laboriosam harum natus dolorum in culpa perferendis!</p>     
+    </div>
+    <pre>
+&lt;style&gt;
+    #word_shadow p{
+        text-shadow: 5px 10px 5px darkblue;
+    }
+&lt;/style&gt;        
+四个值分别为 text-shadow: 左右偏移   上下偏移    偏移量     颜色
+    </pre>
+    <h4>设置placeholder的字体样式</h4>
+    <div id="input_placeholder">
+    <input type="text" placeholder="zhaoshuaifei">    
+    </div>
+    <pre>
+&lt;style&gt;
+#input_placeholder input::placeholder{
+        color: red;
+    }
+&lt;/style&gt;          
+    </pre>
+    <h4>解决IOS页面滑动卡顿</h4>
+    <div>
+       -webkit-overflow-scrolling: touch; 
+    </div>
+    <pre>
+&lt;style&gt;
+body,html{
+    -webkit-overflow-scrolling: touch;
+}
+&lt;/style&gt;        
+    </pre>
+    <h4>设置滚动条样式</h4>
+    <div id="scrollbar_style">
+        <pre>
+            Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Commodi modi delectus ratione sed veritatis doloribus architecto ipsum corporis, dicta optio iste ullam itaque cumque minima consequatur animi maiores illum voluptatum?
+        </pre>
+    </div>
+    <pre>
+&lt;style&gt;
+    #scrollbar_style pre{
+        white-space: nowrap;
+    }
+    #scrollbar_style pre::-webkit-scrollbar{
+        width: 10px;
+        height: 10px;
+    }
+    #scrollbar_style pre::-webkit-scrollbar-thumb {
+       border-radius   : 10px;
+       background-color: skyblue;
+    }
+&lt;/style&gt;        
+    </pre>
+    <h4>实现隐藏滚动条同时又可以滚动</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+.demo::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.demo {
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+&lt;/style&gt;        
+    </pre>
+ <h4>Table表格边框合并</h4>
+    <div>
+table,tr,td{
+  border: 1px solid #666;
+}
+table{
+  border-collapse: collapse;
+}        
+    </div>
+    <pre>
+&lt;style&gt;
+
+&lt;/style&gt;        
+    </pre>
+    <h4>css 选取第 n 个标签元素</h4>
+    <div>
+        
+    </div>
+    <pre>
+first-child first-child 表示选择列表中的第一个标签。
+last-child last-child 表示选择列表中的最后一个标签
+nth-child(3) 表示选择列表中的第 3 个标签
+nth-child(2n) 这个表示选择列表中的偶数标签
+nth-child(2n-1) 这个表示选择列表中的奇数标签
+nth-child(n+3) 这个表示选择列表中的标签从第 3 个开始到最后。
+nth-child(-n+3) 这个表示选择列表中的标签从 0 到 3，即小于 3 的标签。
+nth-last-child(3) 这个表示选择列表中的倒数第 3 个标签     
+    </pre>
+    <h4>移动端软键盘变为搜索方式</h4>
+    <div>
+       <input type="search"> 
+    </div>
+    <pre>
+&lt;input type="search" /&gt;
+默认为前往，要使变成搜索，变换input声明属性
+    </pre>
+<!--     <h4>onerror 处理图片异常</h4>
+    <div>
+        <img src="./izye.png" alt=""  onerror="this.src='url;this.onerror=null'+ " />
+    </div>
+    <pre>
+&lt;style&gt;
+
+&lt;/style&gt;        
+    </pre> -->
+<!--     <h4>背景图片的大小</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+
+&lt;/style&gt;        
+    </pre> -->
+    <h4>文字之间的间距</h4>
+    <div id="text_space">
+        <p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Sunt commodi expedita quibusdam, possimus fugit in dolor recusandae sed natus quo libero, delectus eaque, excepturi eius accusantium et omnis facilis reiciendis.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Odit placeat unde aliquam odio expedita inventore, consequuntur quas consectetur asperiores similique error esse deleniti recusandae modi maiores in ratione nemo rerum. Earum vero aut adipisci maiores cupiditate delectus consequatur doloribus, deserunt vel laboriosam alias repudiandae et, dolorum possimus illo illum assumenda molestias itaque dolores, quidem ipsa? Doloribus, quia doloremque molestiae ipsa harum fugiat accusantium, similique cupiditate obcaecati cum officia dolorem quae non, impedit itaque modi tenetur facilis delectus cumque ducimus voluptatum architecto. Ab dolor quidem, maiores placeat. Quia, repudiandae. Animi, eius ipsum eaque consequatur neque excepturi eos natus, ex necessitatibus. Ut.</p>
+    </div>
+    <pre>
+&lt;style&gt;
+#text_space p{
+        letter-spacing: 2px;       /*文字距离*/
+        text-indent: 20px;         /*首行缩进*/
+    }
+&lt;/style&gt;        
+    </pre>
+    <h4>元素占满整个屏幕</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+.dom{
+  width:100%;
+  height:100vh;    /*关键是这个vh*/
+}
+&lt;/style&gt;        
+    </pre>
+    <h4>CSS实现文本两端对齐(更美观)对比</h4>
+    <div id="duiqi">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi nemo officiis dignissimos, molestiae mollitia sunt sit numquam placeat esse culpa optio, quibusdam impedit maxime laudantium eaque recusandae molestias voluptatum quasi. Expedita, molestias voluptas inventore quisquam corrupti labore iure minus sunt!</p> 
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores rem asperiores voluptatibus itaque ducimus minima velit est saepe a. Incidunt quidem neque, reprehenderit provident placeat harum, rem, consequatur laborum voluptatum obcaecati minima molestias dolore a nulla! Placeat accusantium tempora facere.</p> 
+    </div>
+    <pre>
+&lt;style&gt;
+    #duiqi{
+        padding: 50px;
+    }
+    #duiqi p:first-child{
+        text-align: justify;
+    }
+&lt;/style&gt;        
+    </pre>
+    <h4>禁止用户选择</h4>
+    <div id="unselect">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed architecto facilis accusantium. Magnam doloribus, aliquid, possimus molestias cumque nemo eligendi esse repudiandae temporibus, nulla vero dolores, officiis impedit tempora!</p>
+    </div>
+    <pre>
+&lt;style&gt;
+user-select: none;
+&lt;/style&gt;        
+    </pre>
+    <h4>使用硬件加速</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+  transform: translateZ(0);    /*任意元素引入开启3d模式强制开启性能*/
+&lt;/style&gt;        
+    </pre>
+    <h4 class="notice">页面动画出现闪烁问题</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+在 Chrome and Safari中，当我们使用CSS transforms 或者 animations时可能会有页面闪烁的效果，下面的代码可以修复此情况：
+.cube {
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+ 
+   -webkit-perspective: 1000;
+   perspective: 1000;
+   /* Other transform properties here */
+}
+.cube {
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+  /* Other transform properties here */
+} web内核特定
+&lt;/style&gt;        
+    </pre>
+    <h4>字母大小写转换</h4>
+    <div id="zimu">
+        <p>正常情况Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Nihil esse sit alias corporis voluptatem reprehenderit, cupiditate id blanditiis, odit delectus at qui inventore. Corporis commodi illum, excepturi quasi ipsa suscipit!</p>
+        <p>全部大写Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo itaque commodi tempora neque autem a architecto doloremque aut libero, harum ipsam? Odit exercitationem ut voluptate laudantium odio accusantium sequi nihil.</p>
+        <p>全部小写Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo itaque commodi tempora neque autem a architecto doloremque aut libero, harum ipsam? Odit exercitationem ut voluptate laudantium odio accusantium sequi nihil.</p>
+        <p>每个单词首字母大写Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo itaque commodi tempora neque autem a architecto doloremque aut libero, harum ipsam? Odit exercitationem ut voluptate laudantium odio accusantium sequi nihil.</p>
+        <p>全部大写但缩小字体Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo itaque commodi tempora neque autem a architecto doloremque aut libero, harum ipsam? Odit exercitationem ut voluptate laudantium odio accusantium sequi nihil.</p>
+    </div>
+    <pre>
+&lt;style&gt;
+#zimu p{
+        margin: 10px 0px;
+    }
+    #zimu p:nth-child(2){
+        text-transform: uppercase;
+    }
+    #zimu p:nth-child(3){
+        text-transform: lowercase;
+    }
+    #zimu p:nth-child(4){
+        text-transform: capitalize;
+    }
+    #zimu p:nth-child(5){
+        font-variant: small-caps
+    }
+&lt;/style&gt;        
+    </pre>
+    <h4>将一个容器设为透明</h4>
+    <div id="opacity">
+        <div></div>
+    </div>
+    <pre>
+&lt;style&gt;
+    #opacity{
+        background: lime;
+    }
+    #opacity div{
+        width: 100px;
+        height: 100px;
+        background: red;
+        opacity: 0.5;
+    }
+&lt;/style&gt;        
+    </pre>
+    <h4 class="notice">消除transition闪屏</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+.wrap {
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+&lt;/style&gt;        
+    </pre>
+    <h4 class="notice">识别字符串里的 '\n' 并换行</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+body {
+   white-space: pre-line;
+}
+&lt;/style&gt;        
+    </pre>
+    <h4 class="notice">移除a标签被点链接的边框</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+a {
+  outline: none；//或者outline: 0
+  text-decoration:none; //取消默认下划线
+}
+&lt;/style&gt;        
+    </pre>
+    <h4 class="notice">CSS显示链接之后的URL</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;a href="//www.baidu.com">百度&lt;/a&gt;
+&lt;style&gt;
+a:after {content: " (" attr(href) ")";}
+&lt;/style&gt;       
+    </pre>
+<!--     <h4>select内容居中显示、下拉内容右对齐</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+
+&lt;/style&gt;        
+    </pre>
+    <h4>修改input输入框中光标的颜色不改变字体的颜色</h4>
+    <div>
+        
+    </div>
+    <pre>
+&lt;style&gt;
+
+&lt;/style&gt;        
+    </pre>
+     -->
+    <h4>让div里的图片和文字同时上下居中</h4>
+    <div id="imgandp">
+
+    </div>
+    <pre>
+&lt;style&gt;
+vertival-align：middle
+&lt;/style&gt;        
+    </pre>
+
+</div>

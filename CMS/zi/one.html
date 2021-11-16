@@ -1,0 +1,145 @@
+<style>
+		#bigbox4{position: relative;margin: 0px auto;overflow:hidden;width: 770px;height: 400px;border: 1px solid lime}
+		#ul3{list-style: none;border: 1px solid orange;position: absolute;top:0px;left:0px;padding: 0px;width: 1592px;}
+		#ul3 li{float: left;background:aqua;padding: 0px;margin: 0px}
+		#ul3 li img{}
+	</style>
+	<div id="bigbox4">
+	<ul id="ul3">
+		<li><img src="img/angle.png" alt=""></li>
+		<li><img src="img/sword.png" alt=""></li>
+		<li><img src="img/ayeni.jpg" alt=""></li>
+		<li><img src="img/angle.png" alt=""></li>
+		<li><img src="img/sword.png" alt=""></li>
+		<li><img src="img/ayeni.jpg" alt=""></li>
+	</ul>	
+	</div>
+	<script>
+	let ul3=document.getElementById('ul3');
+	let oli=ul3.getElementsByTagName('li');
+	console.log(ul3.offsetLeft);
+	
+	let stq=function function_name(argument) {
+		// body...
+	let t1=setInterval(function (argument) {
+		ul3.style.left=ul3.offsetLeft-3+'px';
+		if(ul3.offsetLeft<-ul3.offsetWidth/2){
+			ul3.style.left=0
+		}
+	},30)
+	}
+		stq();
+	// let promise= new Promise(function (resolve,reject) {
+	// 	console.log('success');
+	// 		ul3.style.width=oli[0].offsetWidth*oli.length+5+'px';
+	// 	resolve();
+	// });
+	// promise.then(function (argument) {
+	// 	// body...
+	// })
+
+	
+	</script>
+	<pre>
+	&lt;script&gt;
+	var ul3=document.getElementById('ul3');
+	var oli=ul3.getElementsByTagName('li');
+	ul3.innerHTML+=ul3.innerHTML; 无缝切换起码有两套完全相同的列表
+	ul3.style.width=oli[0].offsetWidth*oli.length+5+'px'; 因为火狐诡异的兼容问题需要多5像素 UL的宽度为所有项的宽度和
+	setInterval(function (argument) {
+		ul3.style.left=ul3.offsetLeft-3+'px'; 
+		if(ul3.offsetLeft&lt;-ul3.offsetWidth/2){ 判断是否为切换的那个定位值，是就重置位置
+			ul3.style.left=0
+		}
+	},30)
+	&lt;/script&gt;
+	</pre>
+	<style>
+		#bigbox5{position: relative;margin: 0px auto;overflow:hidden;width: 770px;height: 400px;border: 1px solid lime}
+		#ul4{list-style: none;border: 1px solid orange;position: absolute;top:0px;left:0px;padding: 0px;width: 1592px;}
+		#ul4 li{float: left;background:aqua;padding: 0px;margin: 0px}
+		#ul4 li img{}
+	</style>
+	<button id="let">left</button>
+	<button id="rit">right</button>
+	<div id="bigbox5">
+	<ul id="ul4">
+		<li><img src="img/angle.png" alt=""></li>
+		<li><img src="img/sword.png" alt=""></li>
+		<li><img src="img/ayeni.jpg" alt=""></li>
+		<li><img src="img/angle.png" alt=""></li>
+		<li><img src="img/sword.png" alt=""></li>
+		<li><img src="img/ayeni.jpg" alt=""></li>
+	</ul>	
+	</div>
+	<script>
+	var let=document.getElementById('let');
+	let rit=document.getElementById('rit');
+	let ul4=document.getElementById('ul4');
+	let ali=ul4.getElementsByTagName('li');
+	let ipseed=3;
+	
+	setTimeout(function (argument) {
+
+		console.log(ul4.offsetLeft);
+	},10)
+	let.onclick=function (argument) {
+		ipseed=3;
+	}
+	rit.onclick=function (argument) {
+		ipseed=-3
+	}
+	bigbox5.onmouseout=function (argument) {
+		timer1=setInterval(function (argument) {
+		ul4.style.left=ul4.offsetLeft+ipseed+'px';
+		if(ul4.offsetLeft<-ul4.offsetWidth/2){
+			ul4.style.left='0px';
+		}else if(ul4.offsetLeft>0){
+			ul4.style.left=-ul4.offsetWidth/2+'px';
+		}
+	},30)
+	}
+	bigbox5.onmouseover=function (argument) {
+		clearInterval(timer1);
+	}
+
+	timer1=setInterval(function (argument) {
+		ul4.style.left=ul4.offsetLeft+ipseed+'px';
+		if(ul4.offsetLeft<-ul4.offsetWidth/2){
+			ul4.style.left='0px';
+		}else if(ul4.offsetLeft>0){
+			ul4.style.left=-ul4.offsetWidth/2+'px';
+		}
+	},30)
+	</script>
+	<pre>
+	&lt;script&gt;
+	var let=document.getElementById('let');
+	var rit=document.getElementById('rit');
+	var ul4=document.getElementById('ul4');
+	var ali=ul4.getElementsByTagName('li');
+	var ipseed=-3;
+	ul4.innerHTML+=ul4.innerHTML;
+	let.onclick=function (argument) {
+		ipseed=3;
+	}
+	rit.onclick=function (argument) {
+		ipseed=-3
+	}
+	bigbox5.onmouseout=function (argument) {
+		timer1
+	}
+	bigbox5.onmouseover=function (argument) {
+		clearInterval(timer1)
+	}
+	ul4.style.width=ali[0].offsetWidth*ali.length+5+'px';
+	timer1=setInterval(function (argument) {
+		ul4.style.left=ul4.offsetLeft+ipseed+'px';
+		if(ul4.offsetLeft<-ul4.offsetWidth/2){
+			ul4.style.left='0px';
+		}else if(ul4.offsetLeft&gt;0){
+			ul4.style.left=-ul4.offsetWidth/2+'px';
+		}
+	},30)
+	&lt;/script&gt;
+	</pre>
